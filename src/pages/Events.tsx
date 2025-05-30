@@ -467,11 +467,6 @@ const Events = () => {
                   >
                     {getCategoryLabel(event.category)}
                   </span>
-                  {event.featured && (
-                    <span className="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm font-montserrat font-bold">
-                      ✨
-                    </span>
-                  )}
                 </div>
                 
                 <h3 className="text-xl sm:text-2xl font-montserrat font-bold text-dark-950 mb-4 leading-tight">

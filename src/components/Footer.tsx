@@ -1,8 +1,4 @@
-import { useTranslation } from 'react-i18next';
-
 const Footer = () => {
-  const { t } = useTranslation();
-
   return (
     <footer className="bg-dark-950 border-t border-dark-800 py-8 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
