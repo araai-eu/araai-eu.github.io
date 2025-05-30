@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
           <div className="text-gray-400 font-signika">
-            {t('footer.copyright')}
+            © 2025 ARAAI
           </div>
 
           {/* Links */}
@@ -18,19 +18,19 @@ const Footer = () => {
               href="#" 
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
             >
-              {t('footer.privacy')}
+              Privacy Policy
             </a>
             <a 
               href="#" 
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
             >
-              {t('footer.cookies')}
+              Cookie settings
             </a>
             <a 
               href="mailto:office@araai.org" 
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
             >
-              {t('footer.email')}
+              Email: office@araai.org
             </a>
           </div>
 

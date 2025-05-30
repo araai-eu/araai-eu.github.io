@@ -1,9 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
+interface TeamMember {
+  name: string;
+  role: string;
+  roleEN: string;
+  image: string;
+  bio: string;
+  bioEN: string;
+}
+
 const About = () => {
   const { t, i18n } = useTranslation();
-  const [selectedMember, setSelectedMember] = useState<any>(null);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const leftGoals = t('about.goals.left', { returnObjects: true }) as string[];
   const rightGoals = t('about.goals.right', { returnObjects: true }) as string[];

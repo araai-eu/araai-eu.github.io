@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Move data outside component to prevent re-creation on every render
-const getTargetGroups = (t: any) => [
+const getTargetGroups = (t: ReturnType<typeof useTranslation>['t']) => [
   {
     id: 'dla-kogo',
     title: t('sections.forWho.title'),

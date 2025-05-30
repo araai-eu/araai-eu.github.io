@@ -47,10 +47,10 @@ const News = () => {
             {newsArticles.map((article) => (
               <article 
                 key={article.id} 
-                className="bg-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 sm:p-8 border border-gray-300"
+                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 sm:p-8 border border-gray-200"
               >
                 <div className="mb-4">
-                  <div className="text-sm font-signika font-semibold mb-2" style={{color: '#70fcfe'}}>
+                  <div className="text-sm font-signika font-semibold mb-2 text-primary-400">
                     {formatNewsDate(article.date)}
                   </div>
                   <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-dark-950 mb-4 leading-tight">
@@ -58,15 +58,9 @@ const News = () => {
                   </h2>
                 </div>
                 
-                <p className="text-dark-700 font-signika leading-relaxed mb-6">
+                <p className="text-gray-600 font-signika leading-relaxed mb-6">
                   {article.content}
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="btn-primary">
-                    {t('news.buttons.readMore')}
-                  </button>
-                </div>
               </article>
             ))}
           </div>
