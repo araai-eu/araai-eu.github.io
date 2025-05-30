@@ -1,0 +1,168 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "O nas", 
+    "events": "Wydarzenia",
+    "news": "Aktualności"
+  },
+  "hero": {
+    "welcome": "Witamy w",
+    "araai": "ARAAI",
+    "subtitle": "Społeczności ekspertów, która rozwija AI opartą na wiedzy, wartościach i działaniu.",
+    "description": "Dostarczamy wiedzę, tworzymy standardy, wpływamy na prawo i wspieramy wdrożenia AI."
+  },
+  "mission": {
+    "part1": "Wprowadzamy AI odpowiedzialnie i z myślą o ludziach. Tworzymy praktyczne narzędzia,",
+    "part2": "raporty i sieci wsparcia, które realnie pomagają. Wspieramy projekty z misją i wartością.",
+    "part3": "Działamy wspólnie – bo razem możemy więcej."
+  },
+  "aiChanges": {
+    "title": "AI zmienia wszystko-",
+    "subtitle": "- zdrowie, edukację, pracę, bezpieczeństwo.....",
+    "question": "...tylko kto o tym wszystkim decyduje? Kto ustala, co jest \"dobre\", \"legalne\", \"etyczne\"? Kto ma odwagę zapytać: dla kogo właściwie jest ta przyszłość, którą tworzymy?"
+  },
+  "whyAraai": {
+    "title": "Dlaczego istnieje ARAAI?",
+    "description": "Bo nie chcemy, żeby rozwój AI odbywał się \"gdzieś indziej\" – bez nas, bez wartości, bez refleksji. Tworzymy przestrzeń, gdzie naukowcy, przedsiębiorcy, decydenci i pasjonaci łączą siły, by:",
+    "goals": {
+      "technology": "Wspólnie rozwijać odpowiedzialną technologie",
+      "knowledge": "Dzielić się wiedzą, budując zaufanie i rozwój", 
+      "influence": "Wpływać na kierunek rozwoju w duchu odpowiedzialności",
+      "represent": "Reprezentować interes społeczny w rozmowie o przyszłości"
+    }
+  },
+  "sections": {
+    "forWho": {
+      "title": "Dla Kogo?",
+      "content": "Łączymy naukowców, innowatorów, liderów biznesu i decydentów, by wspólnie rozwijać sztuczną inteligencję, która służy ludziom, wzmacnia gospodarkę i buduje świadome społeczeństwo."
+    },
+    "experts": {
+      "title": "Eksperci i badacze",
+      "content": "Twoja wiedza może zmieniać świat - o ile trafi w odpowiednie ręce. W ARAAI łączymy badania z praktyką, żeby nauka miała realne przełożenie na ludzi, decyzje i technologie. Tworzymy środowisko dla tych, którzy chcą prowadzić badania z misją - nie tylko opisywać świat, ale go współtworzyć.",
+      "points": [
+        "Jeśli jesteś gotów zamienić wiedzę w działanie – pomożemy Ci znaleźć partnerów i warunki do wdrożeń.",
+        "Twoje publikacje nie muszą kończyć się na konferencjach. Pomagamy przekładać idee na wdrożenia – wspólnie z firmami, instytucjami i zespołami interdyscyplinarnymi.",
+        "Udostępniamy sieć kontaktów, zasoby i wsparcie, żebyś mógł skupić się na tym, co najważniejsze — a nie na budowaniu podstaw od nowa.",
+        "Budujemy przestrzeń do wymiany wiedzy, dyskusji i współpracy z innymi badaczami, którzy – tak jak Ty – szukają odpowiedzialnych i skutecznych sposobów wykorzystania AI."
+      ]
+    },
+    "business": {
+      "title": "Biznes i start-up'y",
+      "content": "AI nie jest dodatkiem. To nowy fundament działania firm. Zamiast gubić się w modnych hashtach i pustych sloganach – możesz działać mądrze, szybko i bezpiecznie. ARAAI to Twoje zaplecze technologiczne, prawne i strategiczne.",
+      "points": [
+        "Pomożemy Ci odróżnić realne rozwiązania od marketingowego szumu.",
+        "Poznasz ludzi, którzy już wdrożyli AI i wiedzą, jak to zrobić dobrze.",
+        "Wspólnie zbudujemy strategie i produkty, które są skalowalne, zgodne z prawem i etyczne.",
+        "Zyskasz sieć kontaktów, wiedzę i wsparcie, które pozwolą Ci rozwijać biznes z AI naprawdę, a nie \"na pokaz\"."
+      ]
+    },
+    "decisionMakers": {
+      "title": "Decydenci, administracja, UE, Media",
+      "content": "Sztuczna inteligencja to nie przyszłość - to teraźniejszość. I właśnie teraz potrzebne są decyzje: mądre i odważne. Żeby je podjąć, musisz mieć wokół siebie ludzi, którzy rozumieją technologię i społeczeństwo. W ARAAI:",
+      "points": [
+        "Dajemy Ci wiedzę, której nie zastąpi algorytm ani raport.",
+        "Reprezentujemy głos tych, którzy tworzą AI - i tych, na których wpływa.",
+        "Pomagamy tworzyć prawo, które działa nie tylko szybko, ale skutecznie.",
+        "Wspieramy Cię, żebyś nie był sam w najważniejszych decyzjach tej dekady."
+      ]
+    },
+    "enthusiasts": {
+      "title": "Pasjonaci AI",
+      "content": "Ciekawość to najlepszy powód, żeby wejść w świat AI. Nie masz doktoratu? Świetnie - nie musisz. Masz pytania? Jeszcze lepiej. W ARAAI:",
+      "points": [
+        "Możesz zadawać każde pytanie - i dostaniesz odpowiedź.",
+        "Uczysz się razem z innymi - nie obok nich.",
+        "Spotykasz ludzi, którzy myślą jak Ty i pójdą z Tobą dalej.",
+        "A jeśli chcesz, możesz działać przy projektach, które naprawdę coś zmieniają."
+      ]
+    },
+    "fees": {
+      "title": "Składki",
+      "annual": {
+        "title": "Składki roczne:",
+        "regular": "Składka regularna: 200 PLN (płatna w momencie dołączenia)",
+        "reduced": "Składka ulgowa: 50% składki regularnej", 
+        "honorary": "Składka honorowa: 0 PLN"
+      },
+      "discounts": {
+        "title": "Składki ulgowe:",
+        "youth": "młodzież do 20 roku życia",
+        "students": "studenci i doktoranci do roku w którym kończą 26 roku życia",
+        "special": "emeryci, renciści, inwalidzi, kombatanci i honorowi dawcy krwi"
+      }
+    }
+  },
+  "cta": {
+    "text": "Aby dołączyć, prosimy o wypełnienie formularza.",
+    "button": "Wypełnij formularz zgłoszeniowy"
+  },
+  "events": {
+    "calendar": {
+      "title": "Kalendarz Wydarzeń"
+    },
+    "upcoming": {
+      "title": "Nadchodzące Wydarzenia"
+    },
+    "buttons": {
+      "moreInfo": "Więcej informacji",
+      "register": "Zapisz się",
+      "close": "Zamknij"
+    }
+  },
+  "news": {
+    "title": "Aktualności",
+    "buttons": {
+      "readMore": "Czytaj więcej"
+    },
+    "articlesList": [
+      {
+        "id": "recruitment-2025",
+        "title": "Nabór nowych członków",
+        "content": "Rozpoczynamy nabór nowych członków do stowarzyszenia. Zapraszamy zarówno ekspertów, jak i entuzjastów sztucznej inteligencji.",
+        "date": "2025-01-01",
+        "category": "announcement",
+        "featured": true
+      },
+      {
+        "id": "araai-inauguration",
+        "title": "Inauguracja Stowarzyszenia ARAAI",
+        "content": "Z przyjemnością ogłaszamy oficjalne rozpoczęcie działalności Stowarzyszenia Badań i Zastosowań Sztucznej Inteligencji (ARAAI). Nasza misja to wspieranie rozwoju AI w Polsce.",
+        "date": "2024-12-19",
+        "category": "announcement",
+        "featured": false
+      }
+    ]
+  },
+  "about": {
+    "title": "O nas",
+    "subtitle": "Jesteśmy społecznością AI, która wspólnie napędza innowacje i wspiera przełomowe idee, kształtując przyszłość polskiego społeczeństwa, biznesu i nauki.",
+    "vision": {
+      "title": "Nasza Wizja",
+      "description": "Stymulujemy ekosystem AI, aby Polska stała się liderem sztucznej inteligencji i wyznaczała innowacje w Europie. Tworzymy kluczowe miejsca, gdzie wiedza i praktyka AI się łączą. Nasze działania są katalizatorem dla przyszłych pokoleń, budując świat, w którym technologia i człowiek współistnieją w harmonii."
+    },
+    "goals": {
+      "title": "Cele stowarzyszenia:",
+      "left": [
+        "Działalność na rzecz rozwoju sztucznej inteligencji",
+        "Opracowywanie opinii i zaleceń dla jednostek przepisów dotyczących rozwoju i stosowania AI",
+        "Przygotowywanie projektów i wsparcia dla rozwoju zastosowań AI", 
+        "Udział w tworzeniu i opiniowaniu przepisów dotyczących AI",
+        "Publikacje, edukacja i działania informacyjne na temat AI"
+      ],
+      "right": [
+        "Działalność oświatowa, edukacyjna oraz szkoleniowa w dziedzinie sztucznej inteligencji",
+        "Zrzeszanie i reprezentowanie środowisk związanych z AI wobec instytucji krajowych i zagranicznych",
+        "Kształtowanie i promowanie etycznej, godnej zaufania i zorientowanej na człowieka AI",
+        "Organizowanie i koordynowanie inicjatyw (np. konferencji, targów, wystaw, kongresów)"
+      ]
+    },
+    "team": {
+      "board": {
+        "title": "Zarząd ARAAI"
+      },
+      "audit": {
+        "title": "Komisja Rewizyjna"
+      }
+    }
+  }
+} 

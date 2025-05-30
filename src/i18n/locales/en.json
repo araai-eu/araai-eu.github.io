@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "welcome": "Welcome to",
+    "araai": "ARAAI",
+    "subtitle": "Community of experts developing AI based on knowledge, values and action.",
+    "description": "We provide knowledge, create standards, influence law and support AI implementations."
+  },
+  "mission": {
+    "part1": "We introduce AI responsibly and with people in mind. We create practical tools,",
+    "part2": "reports and support networks that really help. We support projects with mission and value.",
+    "part3": "We act together – because together we can do more."
+  },
+  "aiChanges": {
+    "title": "AI changes everything-",
+    "subtitle": "- health, education, work, security.....",
+    "question": "...but who decides about all this? Who determines what is \"good\", \"legal\", \"ethical\"? Who has the courage to ask: for whom is this future we are creating?"
+  },
+  "whyAraai": {
+    "title": "Why does ARAAI exist?",
+    "description": "Because we don't want AI development to happen \"somewhere else\" – without us, without values, without reflection. We create a space where scientists, entrepreneurs, decision-makers and enthusiasts join forces to:",
+    "goals": {
+      "technology": "Jointly develop responsible technology",
+      "knowledge": "Share knowledge, building trust and development", 
+      "influence": "Influence the direction of development in the spirit of responsibility",
+      "represent": "Represent social interest in the conversation about the future"
+    }
+  },
+  "sections": {
+    "forWho": {
+      "title": "For Who?",
+      "content": "We connect scientists, innovators, business leaders and decision-makers to jointly develop artificial intelligence that serves people, strengthens the economy and builds a conscious society."
+    },
+    "experts": {
+      "title": "Experts and researchers",
+      "content": "Your knowledge can change the world - if it gets into the right hands. At ARAAI we combine research with practice so that science has a real impact on people, decisions and technologies. We create an environment for those who want to conduct research with a mission - not just describe the world, but co-create it.",
+      "points": [
+        "If you are ready to turn knowledge into action – we will help you find partners and conditions for implementation.",
+        "Your publications don't have to end at conferences. We help translate ideas into implementations – together with companies, institutions and interdisciplinary teams.",
+        "We provide a network of contacts, resources and support so you can focus on what's most important — not on building from scratch.",
+        "We build a space for knowledge exchange, discussion and cooperation with other researchers who – like you – are looking for responsible and effective ways to use AI."
+      ]
+    },
+    "business": {
+      "title": "Business and start-ups",
+      "content": "AI is not an add-on. It's the new foundation of business operations. Instead of getting lost in trendy hashtags and empty slogans – you can act smartly, quickly and safely. ARAAI is your technological, legal and strategic background.",
+      "points": [
+        "We will help you distinguish real solutions from marketing noise.",
+        "You will meet people who have already implemented AI and know how to do it well.",
+        "Together we will build strategies and products that are scalable, legal and ethical.",
+        "You will gain a network of contacts, knowledge and support that will allow you to develop AI business for real, not \"for show\"."
+      ]
+    },
+    "decisionMakers": {
+      "title": "Decision makers, administration, EU, Media",
+      "content": "Artificial intelligence is not the future - it is the present. And right now we need decisions: smart and bold. To make them, you need to have people around you who understand technology and society. At ARAAI:",
+      "points": [
+        "We give you knowledge that no algorithm or report can replace.",
+        "We represent the voice of those who create AI - and those affected by it.",
+        "We help create law that works not only quickly, but effectively.",
+        "We support you so that you are not alone in the most important decisions of this decade."
+      ]
+    },
+    "enthusiasts": {
+      "title": "AI enthusiasts",
+      "content": "Curiosity is the best reason to enter the world of AI. Don't have a PhD? Great - you don't need one. Have questions? Even better. At ARAAI:",
+      "points": [
+        "You can ask any question - and you will get an answer.",
+        "You learn together with others - not next to them.",
+        "You meet people who think like you and will go further with you.",
+        "And if you want, you can work on projects that really change something."
+      ]
+    },
+    "fees": {
+      "title": "Fees",
+      "annual": {
+        "title": "Annual fees:",
+        "regular": "Regular fee: 200 PLN (payable upon joining)",
+        "reduced": "Reduced fee: 50% of regular fee", 
+        "honorary": "Honorary fee: 0 PLN"
+      },
+      "discounts": {
+        "title": "Reduced fees:",
+        "youth": "youth up to 20 years of age",
+        "students": "students and doctoral students until the year they turn 26",
+        "special": "retirees, pensioners, disabled, veterans and honorary blood donors"
+      }
+    }
+  },
+  "cta": {
+    "text": "To join, please fill out the form.",
+    "button": "Fill out the application form"
+  },
+  "events": {
+    "calendar": {
+      "title": "Events Calendar"
+    },
+    "upcoming": {
+      "title": "Upcoming Events"
+    },
+    "buttons": {
+      "moreInfo": "More information",
+      "register": "Register",
+      "close": "Close"
+    }
+  },
+  "news": {
+    "title": "News",
+    "buttons": {
+      "readMore": "Read more"
+    },
+    "articlesList": [
+      {
+        "id": "recruitment-2025",
+        "title": "New Member Recruitment",
+        "content": "We are starting recruitment of new members to the association. We invite both experts and enthusiasts of artificial intelligence.",
+        "date": "2025-01-01",
+        "category": "announcement",
+        "featured": true
+      },
+      {
+        "id": "araai-inauguration",
+        "title": "ARAAI Association Inauguration",
+        "content": "We are pleased to announce the official launch of the Association for Research and Applications of Artificial Intelligence (ARAAI). Our mission is to support AI development in Poland.",
+        "date": "2024-12-19",
+        "category": "announcement",
+        "featured": false
+      }
+    ]
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "We are an AI community that jointly drives innovation and supports breakthrough ideas, shaping the future of Polish society, business and science.",
+    "vision": {
+      "title": "Our Vision",
+      "description": "We stimulate the AI ecosystem so that Poland becomes a leader in artificial intelligence and sets innovation in Europe. We create key places where AI knowledge and practice connect. Our actions are a catalyst for future generations, building a world where technology and humans coexist in harmony."
+    },
+    "goals": {
+      "title": "Association goals:",
+      "left": [
+        "Activity for the development of artificial intelligence",
+        "Developing opinions and recommendations for units of regulations concerning the development and application of AI",
+        "Preparing projects and support for the development of AI applications", 
+        "Participation in creating and reviewing AI regulations",
+        "Publications, education and information activities on AI"
+      ],
+      "right": [
+        "Educational, educational and training activities in the field of artificial intelligence",
+        "Associating and representing AI communities to national and foreign institutions",
+        "Shaping and promoting ethical, trustworthy and human-centered AI",
+        "Organizing and coordinating initiatives (e.g. conferences, fairs, exhibitions, congresses)"
+      ]
+    },
+    "team": {
+      "board": {
+        "title": "ARAAI Board"
+      },
+      "audit": {
+        "title": "Audit Committee"
+      }
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About us", 
+    "events": "Events",
+    "news": "News"
+  }
+} 

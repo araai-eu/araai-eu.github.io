@@ -1,0 +1,314 @@
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+
+const About = () => {
+  const { t, i18n } = useTranslation();
+  const [selectedMember, setSelectedMember] = useState<any>(null);
+
+  const leftGoals = t('about.goals.left', { returnObjects: true }) as string[];
+  const rightGoals = t('about.goals.right', { returnObjects: true }) as string[];
+  
+  const currentLanguage = i18n.language || 'pl';
+
+  const boardMembers = [
+    { 
+      name: 'Maria Jędrzejczak', 
+      role: 'Dr nauk prawnych, UAM', 
+      roleEN: 'PhD in Law, AMU',
+      image: '/team/Maria_Jedrzejczak.jpg',
+      bio: 'Doktor nauk prawnych; adiunkt w Zakładzie Prawa Administracyjnego i Nauki o Administracji oraz Lokalny Administrator Bezpieczeństwa Informacji na Wydziale Prawa i Administracji Uniwersytetu im. Adama Mickiewicza w Poznaniu. Członek Rady Naukowej Instytutu Prawa Ochrony Danych Osobowych przy Urzędzie Ochrony Danych Osobowych.\n\nOpiekun naukowy Koła Prawa Ochrony Danych Osobowych i Sztucznej Inteligencji "Salus Populi". Kierownik grantu Narodowego Centrum Nauki pt. "Ochrona danych osobowych w Specjalnym Regionie Administracyjnym Hongkong". Laureatka konkursu IDUB "50 x 50: pięćdziesiąt grantów dla 50 młodych naukowców" z projektem "Personal Data Protection and AI: Comparative Study of US and EU".',
+      bioEN: 'Doctor of Legal Sciences; Assistant Professor at the Department of Administrative Law and Administration Science and Local Information Security Administrator at the Faculty of Law and Administration of Adam Mickiewicz University in Poznań. Member of the Scientific Council of the Institute of Personal Data Protection Law at the Personal Data Protection Office.\n\nScientific supervisor of the "Salus Populi" Personal Data Protection and Artificial Intelligence Law Circle. Head of the National Science Center grant entitled "Personal Data Protection in the Hong Kong Special Administrative Region". Winner of the IDUB competition "50 x 50: fifty grants for 50 young scientists" with the project "Personal Data Protection and AI: Comparative Study of US and EU".'
+    },
+    { 
+      name: 'Piotr Brzyski', 
+      role: 'Zetatech', 
+      roleEN: 'Zetatech',
+      image: '/team/Piotr_Brzyski.jpg',
+      bio: 'Założyciel Zetatech, firmy wdrażającej innowacyjne rozwiązania AI dla klientów korporacyjnych. Z ponad 16-letnim doświadczeniem w branży IT, koncentruję się na odpowiedzialnym wdrażaniu AI i etyce. Jako doradca polskiego Ministerstwa Cyfryzacji poprzez GRAI oraz uczestnik konsultacji Aktu w sprawie AI na poziomie UE, pomagam kształtować przyszłość regulacji AI na poziomie krajowym i europejskim. Moja specjalizacja obejmuje etyczną AI, zarządzanie i nowe technologie. Aktywnie wspieram społeczność AI_Devs, łącząc się z ponad 3000 deweloperami rozwijających ekosystem AI w Polsce. Pasjonuję się wykorzystywaniem technologii do napędzania transformacji biznesowej i innowacji.',
+      bioEN: "Founder of Zetatech, implementing innovative AI solutions for corporate clients. With over 16 years of IT experience, I focus on responsible AI implementation and ethics. As an advisor to the Polish Ministry of Digital Affairs through GRAI and a contributor to EU-level AI Act consultations, I help shape the future of AI regulation at national and European levels. My expertise spans ethical AI, governance, and emerging technologies. I'm an active supporter of the AI_Devs community, connecting with 3,000+ developers advancing the AI ecosystem in Poland. Passionate about leveraging technology to drive business transformation and innovation."
+    },
+    { 
+      name: 'Paweł Dudko', 
+      role: 'Radca Prawny', 
+      roleEN: 'Attorney-at-law',
+      image: '/team/Pawel_Dudko.png',
+      bio: 'Radca prawny z ponad 8-letnim doświadczeniem w branży prawniczej. Obecnie pełni funkcję Head of Legal w STX Next, jednej z największych firm programistycznych w Europie. Wcześniej pracował jako Manager ESG, zajmując się aspektami zrównoważonego rozwoju i odpowiedzialności biznesu.\n\nJednocześnie związany z kancelarią Trenda dr Jakubowicz Węgrzyński i Wspólnicy, gdzie świadczy usługi prawne. Karierę rozpoczynał w Głowacki i Wspólnicy, przechodząc drogę od asystenta prawnego do aplikanta radcowskiego. Specjalizuje się w prawie nowych technologii, ze szczególnym uwzględnieniem aspektów prawnych AI.',
+      bioEN: 'Attorney-at-law with over 8 years of experience in the legal industry. He currently serves as the Head of Legal at STX Next, one of the largest software development companies in Europe. Previously, he worked as an ESG Manager, dealing with aspects of sustainable development and business responsibility.\n\nSimultaneously associated with the law firm Trenda dr Jakubowicz Węgrzyński i Wspólnicy, where he provides legal services. He began his career at Głowacki i Wspólnicy, progressing from a legal assistant to a trainee attorney. He specializes in new technology law, with a particular focus on the legal aspects of AI.'
+    },
+    { 
+      name: 'Łukasz Grzybowski', 
+      role: 'Manager ds. Zespołów Danych', 
+      roleEN: 'Data Teams Manager',
+      image: '/team/Lukasz_Grzybowski.jpeg',
+      bio: 'Doświadczony manager zespołów danych specjalizujący się w AI i inżynierii danych, z doświadczeniem w sektorach badawczym, ubezpieczeniowym, telekomunikacyjnym, marketplacach ogłoszeniowych i cyberbezpieczeństwie. Jako przedsiębiorca i entuzjasta startupów, nowych technologii i innowacji, szczególnie interesuje się obszarami Fintech, IoT i AI.\n\nAktywnie zaangażowany w organizację non-profit Product Cafe, która jest dedykowana budowaniu lokalnych i ogólnopolskich społeczności łączących osoby na styku biznesu, UX i technologii.',
+      bioEN: 'An experienced manager of data teams specializing in AI and data engineering, with a background in research, insurance, telecommunications, classifieds marketplace, and cybersecurity sectors. As an entrepreneur and enthusiast of startups, new technologies, and innovations, he has a particular focus on Fintech, IoT, and AI.\n\nHe is actively involved with the non-profit organization Product Cafe, which is dedicated to building local and Poland-wide communities that connect individuals at the intersection of business, UX, and technology.'
+    },
+    { 
+      name: 'Dr Jędrzej Jakubowicz', 
+      role: 'Adwokat, wspólnik w Trenda Group', 
+      roleEN: 'Attorney-at-law, partner at Trenda Group',
+      image: '/team/Jedrzej_Jakubowicz.jpg',
+      bio: 'Adwokat, wspólnik w Trenda Group. Specjalizuje się w konstruowaniu, negocjowaniu, wykładni oraz wykonaniu umów, ze szczególnym uwzględnieniem umów związanych z transakcjami, IT, projektami wieloaspektowymi oraz projektami związanymi z komercjalizacją know-how.\n\nDoradza strategicznie na każdym etapie biznesu, w tym przy analizie prawnej możliwości komercjalizacji danego przedsięwzięcia. Posiada bogate doświadczenie zawodowe w obszarze transakcji zarówno po stronie kupujących jak i sprzedających. Zajmuje się doradztwem zarządom spółek, radom nadzorczym oraz udziałowcom. Jest wieloletnim doradcą rad nadzorczych spółek, w tym spółek publicznych i z udziałem jednostek publicznych. Wykładowca z zakresu prawa spółek, prawa rynków kapitałowych, prawa cywilnego i prawa podatkowego.',
+      bioEN: 'Attorney-at-law, partner at Trenda Group. Specializes in constructing, negotiating, interpreting, and executing contracts, with a particular focus on agreements related to transactions, IT, multi-faceted projects, and know-how commercialization projects.\n\nProvides strategic advice at every stage of business, including legal analysis of the commercialization potential of specific ventures. Has extensive professional experience in transactions, working with both buyers and sellers. Advises company boards, supervisory boards, and shareholders. A long-time advisor to company supervisory boards, including public companies and those with public entity participation. Lecturer in corporate law, capital market law, civil law, and tax law.'
+    },
+    { 
+      name: 'Krzysztof Jędrzejewski', 
+      role: 'AI Developer', 
+      roleEN: 'AI Developer',
+      image: '/team/Krzysztof_Jedrzejewski.jpeg',
+      bio: 'Posiada ponad 10-letnie doświadczenie w dziedzinach Data Science, ML i AI, zbudowane na solidnym fundamencie 5 lat w rozwoju oprogramowania. Obecnie kieruje jednostką badawczo-rozwojową AI w Pearson. Jego zespół rozwija innowacyjne algorytmy AI, które wzbogacają platformy i aplikacje e-learningowe o nowe, zaawansowane funkcjonalności.\n\nOprócz roli zawodowej, aktywnie przyczynia się do społeczności akademickiej jako wykładowca studiów podyplomowych na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Jest również założycielem Poznan Data Horizon, inicjatywy mającej na celu wspieranie lokalnej społeczności technologicznej w zakresie AI, ML, inżynierii danych i MLOps. Ponadto uczestniczy w projekcie Bielik, społeczności skupionej na budowaniu polskiego LLM.',
+      bioEN: 'Has over 10 years of experience in Data Science, ML, and AI, built on a solid foundation of 5 years in software development. Currently leads the AI R&D unit at Pearson. His team develops innovative AI algorithms that enhance e-learning platforms and applications with new, advanced functionalities.\n\nBeyond his professional role, he actively contributes to the academic community as a lecturer for postgraduate studies at Adam Mickiewicz University in Poznań. He is also the founder of Poznan Data Horizon, an initiative aimed at supporting the local technology community in AI, ML, data engineering, and MLOps. Additionally, he participates in the Bielik project, a community focused on building a Polish LLM.'
+    },
+    { 
+      name: 'Adam Karolewski', 
+      role: 'Specjalista AI', 
+      roleEN: 'AI Specialist',
+      image: '/team/Adam_Karolewski.jpg',
+      bio: 'Projektant procesów uczenia maszynowego, Data Scientist i programista R. Specjalizuje się we wdrażaniu uczenia maszynowego w zarządzaniu łańcuchem dostaw. Wykładowca na lokalnych uniwersytetach w zakresie uczenia maszynowego dla łańcucha dostaw i logistyki.\n\nWnosi innowacje poprzez łączenie prognozowania opartego na uczeniu maszynowym z teorią zarządzania zapasami. Tłumaczy prognozowanie szeregów czasowych na poziom zapasów, który najlepiej służy procesom sprzedaży. Zajmuje się projektowaniem i realizacją aplikacji. Koncentruje się na uczeniu maszynowym, modelowaniu statystycznym, wizualizacji danych i eksploracji danych, osadzając zaawansowaną analitykę w organizacji z podejściem opartym na danych.',
+      bioEN: 'Machine Learning Process Designer, Data Scientist, and R programmer. Specializes in implementing machine learning in supply chain management. Lecturer at local universities on machine learning for supply chain and logistics.\n\nInnovates by combining machine learning-based forecasting with inventory management theory. Translates time series forecasting into inventory levels that best serve sales processes. Focuses on application design and implementation. Concentrates on machine learning, statistical modeling, data visualization, and data exploration, embedding advanced analytics in organizations with a data-driven approach.'
+    }
+  ];
+
+  const auditCommittee = [
+    { 
+      name: 'Anna Proch', 
+      role: 'Członek Komisji Rewizyjnej', 
+      roleEN: 'Audit Committee Member',
+      image: '/team/Anna_Proch.jpg',
+      bio: 'Anna Proch specjalizuje się w doradztwie biznesowym i AI, walidacji koncepcji, projektowaniu rozwiązań cyfrowych oraz strategiach marketingowych, łącząc innowacyjność z praktycznością. Anna pasjonuje się upraszczaniem skomplikowanych zagadnień i inspiruje ją praca z produktami, które kwestionują status quo. Jej portfolio obejmuje współpracę z firmami takimi jak Amazon, Mercedes oraz wieloma dynamicznymi startupami.',
+      bioEN: 'Anna Proch specializes in business and AI consulting, concept validation, digital solution design, and marketing strategies, combining innovation with practicality. Anna is passionate about simplifying complicated issues and is inspired by working with products that challenge the status quo. Her portfolio includes collaboration with companies like Amazon, Mercedes, and multiple dynamic startups.'
+    },
+    { 
+      name: 'Jędrzej Wydra', 
+      role: 'Członek Komisji Rewizyjnej, UAM', 
+      roleEN: 'Audit Committee Member, AMU',
+      image: '/team/Jedrzej_Wydra.jpg',
+      bio: 'Jako "podwójny magister" prawa i matematyki, zajmuję się naukami sądowymi. Moje badania skupiają się na szacowaniu czasu zgonu i narzędziach wspomagających ekspertów sądowych. Jako data scientist, wdrażam AI w praktyce prawniczej.',
+      bioEN: 'As a "double master" in law and mathematics, I focus on forensic science, particularly on time of death estimation tools for judges and forensic experts. As a data scientist, I work on integrating AI into legal practice.'
+    }
+  ];
+
+  return (
+    <div className="pt-16 min-h-screen bg-white">
+      {/* O nas Hero Section with Vision - Combined */}
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 relative overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight">
+            <span className="gradient-text">{t('about.title')}</span>
+          </h1>
+          
+          <div className="max-w-4xl mx-auto mb-16">
+            <p className="text-base sm:text-lg font-signika text-gray-300 leading-relaxed">
+              {t('about.subtitle')}
+            </p>
+          </div>
+
+          {/* Nasza Wizja - now part of same section */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold mb-8 text-primary-400">
+            {t('about.vision.title')}
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg font-signika text-gray-300 leading-relaxed">
+              {t('about.vision.description')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cele stowarzyszenia Section */}
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-dark-950 mb-8">
+              {t('about.goals.title')}
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+            <div className="space-y-6">
+              {leftGoals.map((goal: string, index: number) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="text-primary-400 mt-0 flex-shrink-0 text-3xl font-black leading-none">→</div>
+                  <p className="text-dark-700 font-signika leading-relaxed text-lg">
+                    {goal}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-6">
+              {rightGoals.map((goal: string, index: number) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="text-primary-400 mt-0 flex-shrink-0 text-3xl font-black leading-none">→</div>
+                  <p className="text-dark-700 font-signika leading-relaxed text-lg">
+                    {goal}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zarząd ARAAI Section */}
+      <section className="py-12 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header with same width as grid */}
+          <div className="w-full bg-primary-400 text-dark-950 py-4 mb-12 rounded-lg">
+            <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-center">
+              {t('about.team.board.title')}
+            </h2>
+          </div>
+
+          {/* First row - 4 people */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            {boardMembers.slice(0, 4).map((member, index) => (
+              <div 
+                key={index} 
+                className="text-center cursor-pointer bg-white rounded-lg p-4 hover:bg-dark-950 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl group"
+                onClick={() => setSelectedMember(member)}
+              >
+                <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/team/placeholder.png';
+                    }}
+                  />
+                </div>
+                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
+                  {currentLanguage === 'en' ? member.roleEN : member.role}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Second row - 3 people */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {boardMembers.slice(4, 7).map((member, index) => (
+              <div 
+                key={index + 4} 
+                className="text-center cursor-pointer bg-white rounded-lg p-4 hover:bg-dark-950 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl group"
+                onClick={() => setSelectedMember(member)}
+              >
+                <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/team/placeholder.png';
+                    }}
+                  />
+                </div>
+                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
+                  {currentLanguage === 'en' ? member.roleEN : member.role}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Komisja Rewizyjna Section */}
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header with same width as grid */}
+          <div className="w-full bg-primary-400 text-dark-950 py-4 mb-12 rounded-lg">
+            <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-center">
+              {t('about.team.audit.title')}
+            </h2>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 gap-8 sm:gap-12 max-w-md">
+              {auditCommittee.map((member, index) => (
+                <div 
+                  key={index} 
+                  className="text-center cursor-pointer bg-white rounded-lg p-6 hover:bg-dark-950 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl group"
+                  onClick={() => setSelectedMember(member)}
+                >
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 overflow-hidden rounded-lg">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = '/team/placeholder.png';
+                      }}
+                    />
+                  </div>
+                  <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                    {member.name}
+                  </h3>
+                  <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
+                    {currentLanguage === 'en' ? member.roleEN : member.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bio Modal */}
+      {selectedMember && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-dark-950 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="p-6">
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedMember(null)}
+                className="float-right text-gray-400 hover:text-white text-2xl font-bold"
+              >
+                ×
+              </button>
+              
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={selectedMember.image}
+                    alt={selectedMember.name}
+                    className="w-48 h-48 object-cover rounded-lg mx-auto md:mx-0"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/team/placeholder.png';
+                    }}
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-2xl font-montserrat font-bold text-white mb-2">
+                    {selectedMember.name}
+                  </h3>
+                  <p className="text-primary-300 font-signika font-semibold mb-4">
+                    {currentLanguage === 'en' ? selectedMember.roleEN : selectedMember.role}
+                  </p>
+                  <p className="text-gray-300 font-signika leading-relaxed whitespace-pre-line">
+                    {currentLanguage === 'en' ? selectedMember.bioEN : selectedMember.bio}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default About; 
