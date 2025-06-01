@@ -8,6 +8,7 @@ interface TeamMember {
   image: string;
   bio: string;
   bioEN: string;
+  linkedinUrl?: string;
 }
 
 const About = () => {
@@ -33,6 +34,7 @@ const About = () => {
       role: 'Zetatech', 
       roleEN: 'Zetatech',
       image: '/team/Piotr_Brzyski.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/pbrzyski/',
       bio: 'Założyciel Zetatech, firmy wdrażającej innowacyjne rozwiązania AI dla klientów korporacyjnych. Z ponad 16-letnim doświadczeniem w branży IT, koncentruję się na odpowiedzialnym wdrażaniu AI i etyce. Jako doradca polskiego Ministerstwa Cyfryzacji poprzez GRAI oraz uczestnik konsultacji Aktu w sprawie AI na poziomie UE, pomagam kształtować przyszłość regulacji AI na poziomie krajowym i europejskim. Moja specjalizacja obejmuje etyczną AI, zarządzanie i nowe technologie. Aktywnie wspieram społeczność AI_Devs, łącząc się z ponad 3000 deweloperami rozwijających ekosystem AI w Polsce. Pasjonuję się wykorzystywaniem technologii do napędzania transformacji biznesowej i innowacji.',
       bioEN: "Founder of Zetatech, implementing innovative AI solutions for corporate clients. With over 16 years of IT experience, I focus on responsible AI implementation and ethics. As an advisor to the Polish Ministry of Digital Affairs through GRAI and a contributor to EU-level AI Act consultations, I help shape the future of AI regulation at national and European levels. My expertise spans ethical AI, governance, and emerging technologies. I'm an active supporter of the AI_Devs community, connecting with 3,000+ developers advancing the AI ecosystem in Poland. Passionate about leveraging technology to drive business transformation and innovation."
     },
@@ -41,6 +43,7 @@ const About = () => {
       role: 'Radca Prawny', 
       roleEN: 'Attorney-at-law',
       image: '/team/Pawel_Dudko.png',
+      linkedinUrl: 'https://www.linkedin.com/in/pawe%C5%82-dudko-1b99481b3/',
       bio: 'Radca prawny z ponad 8-letnim doświadczeniem w branży prawniczej. Obecnie pełni funkcję Head of Legal w STX Next, jednej z największych firm programistycznych w Europie. Wcześniej pracował jako Manager ESG, zajmując się aspektami zrównoważonego rozwoju i odpowiedzialności biznesu.\n\nJednocześnie związany z kancelarią Trenda dr Jakubowicz Węgrzyński i Wspólnicy, gdzie świadczy usługi prawne. Karierę rozpoczynał w Głowacki i Wspólnicy, przechodząc drogę od asystenta prawnego do aplikanta radcowskiego. Specjalizuje się w prawie nowych technologii, ze szczególnym uwzględnieniem aspektów prawnych AI.',
       bioEN: 'Attorney-at-law with over 8 years of experience in the legal industry. He currently serves as the Head of Legal at STX Next, one of the largest software development companies in Europe. Previously, he worked as an ESG Manager, dealing with aspects of sustainable development and business responsibility.\n\nSimultaneously associated with the law firm Trenda dr Jakubowicz Węgrzyński i Wspólnicy, where he provides legal services. He began his career at Głowacki i Wspólnicy, progressing from a legal assistant to a trainee attorney. He specializes in new technology law, with a particular focus on the legal aspects of AI.'
     },
@@ -49,6 +52,7 @@ const About = () => {
       role: 'Manager ds. Zespołów Danych', 
       roleEN: 'Data Teams Manager',
       image: '/team/Lukasz_Grzybowski.jpeg',
+      linkedinUrl: 'https://www.linkedin.com/in/lukasz-grzybowski/',
       bio: 'Doświadczony manager zespołów danych specjalizujący się w AI i inżynierii danych, z doświadczeniem w sektorach badawczym, ubezpieczeniowym, telekomunikacyjnym, marketplacach ogłoszeniowych i cyberbezpieczeństwie. Jako przedsiębiorca i entuzjasta startupów, nowych technologii i innowacji, szczególnie interesuje się obszarami Fintech, IoT i AI.\n\nAktywnie zaangażowany w organizację non-profit Product Cafe, która jest dedykowana budowaniu lokalnych i ogólnopolskich społeczności łączących osoby na styku biznesu, UX i technologii.',
       bioEN: 'An experienced manager of data teams specializing in AI and data engineering, with a background in research, insurance, telecommunications, classifieds marketplace, and cybersecurity sectors. As an entrepreneur and enthusiast of startups, new technologies, and innovations, he has a particular focus on Fintech, IoT, and AI.\n\nHe is actively involved with the non-profit organization Product Cafe, which is dedicated to building local and Poland-wide communities that connect individuals at the intersection of business, UX, and technology.'
     },
@@ -57,6 +61,7 @@ const About = () => {
       role: 'Adwokat, wspólnik w Trenda Group', 
       roleEN: 'Attorney-at-law, partner at Trenda Group',
       image: '/team/Jedrzej_Jakubowicz.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/dr-j%C4%99drzej-jakubowicz-7101613b/',
       bio: 'Adwokat, wspólnik w Trenda Group. Specjalizuje się w konstruowaniu, negocjowaniu, wykładni oraz wykonaniu umów, ze szczególnym uwzględnieniem umów związanych z transakcjami, IT, projektami wieloaspektowymi oraz projektami związanymi z komercjalizacją know-how.\n\nDoradza strategicznie na każdym etapie biznesu, w tym przy analizie prawnej możliwości komercjalizacji danego przedsięwzięcia. Posiada bogate doświadczenie zawodowe w obszarze transakcji zarówno po stronie kupujących jak i sprzedających. Zajmuje się doradztwem zarządom spółek, radom nadzorczym oraz udziałowcom. Jest wieloletnim doradcą rad nadzorczych spółek, w tym spółek publicznych i z udziałem jednostek publicznych. Wykładowca z zakresu prawa spółek, prawa rynków kapitałowych, prawa cywilnego i prawa podatkowego.',
       bioEN: 'Attorney-at-law, partner at Trenda Group. Specializes in constructing, negotiating, interpreting, and executing contracts, with a particular focus on agreements related to transactions, IT, multi-faceted projects, and know-how commercialization projects.\n\nProvides strategic advice at every stage of business, including legal analysis of the commercialization potential of specific ventures. Has extensive professional experience in transactions, working with both buyers and sellers. Advises company boards, supervisory boards, and shareholders. A long-time advisor to company supervisory boards, including public companies and those with public entity participation. Lecturer in corporate law, capital market law, civil law, and tax law.'
     },
@@ -65,6 +70,7 @@ const About = () => {
       role: 'AI Developer', 
       roleEN: 'AI Developer',
       image: '/team/Krzysztof_Jedrzejewski.jpeg',
+      linkedinUrl: 'https://www.linkedin.com/in/kjedrzejewski/',
       bio: 'Posiada ponad 10-letnie doświadczenie w dziedzinach Data Science, ML i AI, zbudowane na solidnym fundamencie 5 lat w rozwoju oprogramowania. Obecnie kieruje jednostką badawczo-rozwojową AI w Pearson. Jego zespół rozwija innowacyjne algorytmy AI, które wzbogacają platformy i aplikacje e-learningowe o nowe, zaawansowane funkcjonalności.\n\nOprócz roli zawodowej, aktywnie przyczynia się do społeczności akademickiej jako wykładowca studiów podyplomowych na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Jest również założycielem Poznan Data Horizon, inicjatywy mającej na celu wspieranie lokalnej społeczności technologicznej w zakresie AI, ML, inżynierii danych i MLOps. Ponadto uczestniczy w projekcie Bielik, społeczności skupionej na budowaniu polskiego LLM.',
       bioEN: 'Has over 10 years of experience in Data Science, ML, and AI, built on a solid foundation of 5 years in software development. Currently leads the AI R&D unit at Pearson. His team develops innovative AI algorithms that enhance e-learning platforms and applications with new, advanced functionalities.\n\nBeyond his professional role, he actively contributes to the academic community as a lecturer for postgraduate studies at Adam Mickiewicz University in Poznań. He is also the founder of Poznan Data Horizon, an initiative aimed at supporting the local technology community in AI, ML, data engineering, and MLOps. Additionally, he participates in the Bielik project, a community focused on building a Polish LLM.'
     },
@@ -73,6 +79,7 @@ const About = () => {
       role: 'Specjalista AI', 
       roleEN: 'AI Specialist',
       image: '/team/Adam_Karolewski.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/adam-karolewski/',
       bio: 'Projektant procesów uczenia maszynowego, Data Scientist i programista R. Specjalizuje się we wdrażaniu uczenia maszynowego w zarządzaniu łańcuchem dostaw. Wykładowca na lokalnych uniwersytetach w zakresie uczenia maszynowego dla łańcucha dostaw i logistyki.\n\nWnosi innowacje poprzez łączenie prognozowania opartego na uczeniu maszynowym z teorią zarządzania zapasami. Tłumaczy prognozowanie szeregów czasowych na poziom zapasów, który najlepiej służy procesom sprzedaży. Zajmuje się projektowaniem i realizacją aplikacji. Koncentruje się na uczeniu maszynowym, modelowaniu statystycznym, wizualizacji danych i eksploracji danych, osadzając zaawansowaną analitykę w organizacji z podejściem opartym na danych.',
       bioEN: 'Machine Learning Process Designer, Data Scientist, and R programmer. Specializes in implementing machine learning in supply chain management. Lecturer at local universities on machine learning for supply chain and logistics.\n\nInnovates by combining machine learning-based forecasting with inventory management theory. Translates time series forecasting into inventory levels that best serve sales processes. Focuses on application design and implementation. Concentrates on machine learning, statistical modeling, data visualization, and data exploration, embedding advanced analytics in organizations with a data-driven approach.'
     }
@@ -84,6 +91,7 @@ const About = () => {
       role: 'Członek Komisji Rewizyjnej', 
       roleEN: 'Audit Committee Member',
       image: '/team/Anna_Proch.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/annaproch/',
       bio: 'Anna Proch specjalizuje się w doradztwie biznesowym i AI, walidacji koncepcji, projektowaniu rozwiązań cyfrowych oraz strategiach marketingowych, łącząc innowacyjność z praktycznością. Anna pasjonuje się upraszczaniem skomplikowanych zagadnień i inspiruje ją praca z produktami, które kwestionują status quo. Jej portfolio obejmuje współpracę z firmami takimi jak Amazon, Mercedes oraz wieloma dynamicznymi startupami.',
       bioEN: 'Anna Proch specializes in business and AI consulting, concept validation, digital solution design, and marketing strategies, combining innovation with practicality. Anna is passionate about simplifying complicated issues and is inspired by working with products that challenge the status quo. Her portfolio includes collaboration with companies like Amazon, Mercedes, and multiple dynamic startups.'
     },
@@ -92,6 +100,7 @@ const About = () => {
       role: 'Członek Komisji Rewizyjnej, UAM', 
       roleEN: 'Audit Committee Member, AMU',
       image: '/team/Jedrzej_Wydra.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/j%C4%99drzej-wydra-3b12b4232/',
       bio: 'Jako "podwójny magister" prawa i matematyki, zajmuję się naukami sądowymi. Moje badania skupiają się na szacowaniu czasu zgonu i narzędziach wspomagających ekspertów sądowych. Jako data scientist, wdrażam AI w praktyce prawniczej.',
       bioEN: 'As a "double master" in law and mathematics, I focus on forensic science, particularly on time of death estimation tools for judges and forensic experts. As a data scientist, I work on integrating AI into legal practice.'
     }
@@ -301,9 +310,27 @@ const About = () => {
                 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-montserrat font-bold text-white mb-2">
-                    {selectedMember.name}
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-2xl font-montserrat font-bold text-white">
+                      {selectedMember.name}
+                    </h3>
+                    {/* LinkedIn Icon */}
+                    {selectedMember.linkedinUrl && (
+                      <a 
+                        href={selectedMember.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-500 transition-colors duration-200"
+                        style={{ color: '#0077B5' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = '#005885'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = '#0077B5'}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                   <p className="text-primary-300 font-signika font-semibold mb-4">
                     {currentLanguage === 'en' ? selectedMember.roleEN : selectedMember.role}
                   </p>

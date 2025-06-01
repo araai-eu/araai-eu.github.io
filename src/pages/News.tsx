@@ -50,7 +50,7 @@ const News = () => {
                 className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 sm:p-8 border border-gray-200"
               >
                 <div className="mb-4">
-                  <div className="text-sm font-signika font-semibold mb-2 text-primary-400">
+                  <div className="text-sm font-signika font-semibold mb-2 text-black">
                     {formatNewsDate(article.date)}
                   </div>
                   <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-dark-950 mb-4 leading-tight">

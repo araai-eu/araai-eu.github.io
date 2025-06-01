@@ -506,7 +506,7 @@ const Events = () => {
                   </button>
                   <button 
                     onClick={() => setSelectedEvent(event)}
-                    className="w-full border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+                    className="w-full border-2 border-primary-400 text-black hover:bg-primary-400 hover:text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200"
                   >
                     Więcej info
                   </button>

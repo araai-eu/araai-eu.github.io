@@ -4,8 +4,18 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
-          <div className="text-gray-400 font-signika">
-            © 2025 ARAAI
+          <div className="text-gray-400 font-signika flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-4">
+            <div>© 2025 ARAAI</div>
+            <div className="text-sm">
+              <a 
+                href="https://www.ux-zoom.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary-400 transition-colors"
+              >
+                @designed by ux-zoom
+              </a>
+            </div>
           </div>
 
           {/* Links */}
