@@ -2,16 +2,16 @@ const Footer = () => {
   return (
     <footer className="bg-dark-950 border-t border-dark-800 py-8 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Copyright */}
-          <div className="text-gray-400 font-signika flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-4">
-            <div>© 2025 ARAAI</div>
-            <div className="text-sm">
+          <div className="text-gray-400 font-signika flex flex-col items-center md:items-start space-y-2 text-center md:text-left">
+            <div className="text-sm sm:text-base">© 2025 ARAAI</div>
+            <div className="text-xs sm:text-sm">
               <a 
                 href="https://www.ux-zoom.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors"
+                className="hover:text-primary-400 transition-colors break-words"
               >
                 @designed by ux-zoom
               </a>
@@ -19,24 +19,24 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 text-center">
             <a 
               href="#" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
             >
               Privacy Policy
             </a>
             <a 
               href="#" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
             >
               Cookie settings
             </a>
             <a 
               href="mailto:office@araai.org" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center break-all"
             >
-              Email: office@araai.org
+              <span className="hidden sm:inline">Email: </span>office@araai.org
             </a>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="flex space-x-4">
             <a 
               href="#" 
-              className="text-gray-400 hover:text-primary-400 transition-colors"
+              className="text-gray-400 hover:text-primary-400 transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

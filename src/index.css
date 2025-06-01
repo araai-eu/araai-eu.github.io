@@ -10,6 +10,31 @@
   
   body {
     font-family: 'Signika', sans-serif;
+    /* Mobile text improvements */
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+  
+  /* Improve text rendering on mobile */
+  @media (max-width: 640px) {
+    * {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    /* Ensure minimum touch targets */
+    button, a, input, select, textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better text wrapping for long content */
+    p, div, span {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
   }
 }
 
@@ -22,11 +47,32 @@
   }
   
   .btn-primary {
-    @apply bg-primary-400 text-dark-950 font-signika font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:bg-primary-300 hover:scale-105 active:scale-95;
+    @apply bg-primary-400 text-dark-950 font-signika font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:bg-primary-300 hover:scale-105 active:scale-95 min-h-[44px] flex items-center justify-center text-center;
   }
   
   .btn-secondary {
-    @apply border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-dark-950 font-montserrat font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+    @apply border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-dark-950 font-montserrat font-semibold px-6 py-3 rounded-lg transition-all duration-300 min-h-[44px] flex items-center justify-center text-center;
+  }
+
+  /* Mobile button improvements */
+  @media (max-width: 640px) {
+    .btn-primary {
+      @apply px-4 py-3 text-sm leading-tight;
+      white-space: normal;
+      word-wrap: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      line-height: 1.2;
+    }
+    
+    .btn-secondary {
+      @apply px-4 py-3 text-sm leading-tight;
+      white-space: normal;
+      word-wrap: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      line-height: 1.2;
+    }
   }
 
   /* Hide scrollbar for mobile tabs */

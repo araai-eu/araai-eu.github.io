@@ -75,15 +75,15 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-4 sm:mb-6 leading-tight">
                 {t('hero.welcome')} <span className="gradient-text">{t('hero.araai')}</span>,
               </h1>
               
-              <h2 className="text-lg md:text-xl lg:text-2xl font-signika font-semibold text-primary-300 mb-4">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-signika font-semibold text-primary-300 mb-3 sm:mb-4">
                 {t('hero.subtitle')}
               </h2>
               
-              <p className="text-base md:text-lg font-signika text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-signika text-gray-300 leading-relaxed break-words">
                 {t('hero.description')}
               </p>
             </div>
@@ -125,14 +125,14 @@ const Home = () => {
           </div>
           
           {/* Mission text - three parts - full width */}
-          <div className="w-full">
-            <p className="text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight">
+          <div className="w-full space-y-2 sm:space-y-4">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight break-words">
               <strong>{t('mission.part1')}</strong>
             </p>
-            <p className="text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight break-words">
               <strong>{t('mission.part2')}</strong>
             </p>
-            <p className="text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight text-center">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-signika text-dark-950 leading-tight text-center break-words">
               <strong>{t('mission.part3')}</strong>
             </p>
           </div>
@@ -140,22 +140,22 @@ const Home = () => {
       </section>
 
       {/* AI Changes Everything Section */}
-      <section className="py-10 bg-primary-400">
+      <section className="py-8 sm:py-10 bg-primary-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
             {/* Left column */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-dark-950 mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-dark-950 mb-3 sm:mb-4 leading-tight break-words">
                 {t('aiChanges.title')}
               </h2>
-              <p className="text-lg font-signika text-dark-700 leading-relaxed">
+              <p className="text-base sm:text-lg font-signika text-dark-700 leading-relaxed break-words">
                 {t('aiChanges.subtitle')}
               </p>
             </div>
             
             {/* Right column - positioned lower */}
-            <div className="lg:mt-20">
-              <p className="text-lg md:text-xl font-signika text-dark-950 leading-relaxed">
+            <div className="lg:mt-20 mt-4 sm:mt-6">
+              <p className="text-base sm:text-lg md:text-xl font-signika text-dark-950 leading-relaxed break-words">
                 {t('aiChanges.question')}
               </p>
             </div>
@@ -164,19 +164,19 @@ const Home = () => {
       </section>
 
       {/* Why ARAAI exists Section */}
-      <section className="py-20 bg-dark-950">
+      <section className="py-12 sm:py-16 lg:py-20 bg-dark-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-white mb-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-white mb-6 sm:mb-8 break-words">
               {t('whyAraai.title')}
             </h2>
-            <p className="text-lg font-signika text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg font-signika text-gray-300 max-w-4xl mx-auto leading-relaxed break-words">
               {t('whyAraai.description')}
             </p>
           </div>
 
           {/* Goals grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 icon: "/images/ludziki1.JPG",
@@ -195,17 +195,17 @@ const Home = () => {
                 title: t('whyAraai.goals.represent')
               }
             ].map((goal, index) => (
-              <div key={index} className="p-6 text-center">
-                <div className="flex justify-center mb-4">
+              <div key={index} className="p-4 sm:p-6 text-center">
+                <div className="flex justify-center mb-3 sm:mb-4">
                   <img 
                     src={goal.icon} 
                     alt={goal.title}
-                    className="w-16 h-16 object-contain"
+                    className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <h3 className="font-signika font-semibold text-white leading-tight">
+                <h3 className="font-signika font-semibold text-white leading-tight text-sm sm:text-base break-words">
                   {goal.title}
                 </h3>
               </div>
@@ -219,13 +219,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           {/* Mobile/Tablet Navigation - Horizontal Tabs */}
           <div className="lg:hidden bg-white border-b border-gray-200">
-            <div className="px-4 py-2">
-              <div className="flex overflow-x-auto scrollbar-hide space-x-2 pb-2">
+            <div className="px-4 py-3">
+              <div className="flex overflow-x-auto scrollbar-hide gap-3 pb-2 -mx-1">
                 {targetGroups.map((group, index) => (
                   <button
                     key={group.id}
                     onClick={() => setCurrentSection(index)}
-                    className={`px-4 py-2 rounded-full font-montserrat font-semibold text-sm whitespace-nowrap transition-all duration-300 touch-manipulation ${
+                    className={`flex-shrink-0 px-3 py-2 sm:px-4 sm:py-2 rounded-full font-montserrat font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-300 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center ${
                       currentSection === index
                         ? 'bg-primary-400 text-dark-950'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200 active:bg-gray-300'
@@ -362,52 +362,52 @@ const Home = () => {
           </div>
 
           {/* Mobile Content Area */}
-          <div className="lg:hidden bg-white px-4 py-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-dark-950 mb-4">
+          <div className="lg:hidden bg-white px-4 py-6 sm:py-8">
+            <div className="max-w-none">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-dark-950 mb-3 sm:mb-4 break-words">
                 {targetGroups[currentSection].title}
               </h2>
-              <div className="w-16 h-1 bg-primary-400 mb-6"></div>
+              <div className="w-12 sm:w-16 h-1 bg-primary-400 mb-4 sm:mb-6"></div>
               
               {targetGroups[currentSection].isSpecial ? (
                 /* Składki Section - Mobile */
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   <div>
-                    <h3 className="text-lg font-montserrat font-semibold text-primary-400 mb-4">
+                    <h3 className="text-base sm:text-lg font-montserrat font-semibold text-primary-400 mb-3 sm:mb-4 break-words">
                       {t('sections.fees.annual.title')}
                     </h3>
-                    <ul className="space-y-3 text-base font-signika text-dark-950">
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.annual.regular')}
+                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.annual.regular')}</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.annual.reduced')}
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.annual.reduced')}</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.annual.honorary')}
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.annual.honorary')}</span>
                       </li>
                     </ul>
                   </div>
                   
                   <div>
-                    <h3 className="text-lg font-montserrat font-semibold text-primary-400 mb-4">
+                    <h3 className="text-base sm:text-lg font-montserrat font-semibold text-primary-400 mb-3 sm:mb-4 break-words">
                       {t('sections.fees.discounts.title')}
                     </h3>
-                    <ul className="space-y-3 text-base font-signika text-dark-950">
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.discounts.youth')}
+                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.discounts.youth')}</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.discounts.students')}
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.discounts.students')}</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-primary-400 mr-3">•</span>
-                        {t('sections.fees.discounts.special')}
+                      <li className="flex items-start break-words">
+                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                        <span>{t('sections.fees.discounts.special')}</span>
                       </li>
                     </ul>
                   </div>
@@ -415,16 +415,16 @@ const Home = () => {
               ) : (
                 /* Regular sections - Mobile */
                 <>
-                  <p className="text-base font-signika text-dark-950 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base font-signika text-dark-950 leading-relaxed mb-4 sm:mb-6 break-words">
                     {targetGroups[currentSection].content}
                   </p>
                   
                   {targetGroups[currentSection].points && (
-                    <ul className="space-y-3 text-base font-signika text-dark-950">
+                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
                       {(targetGroups[currentSection].points as string[]).map((point: string, index: number) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {point}
+                        <li key={index} className="flex items-start break-words">
+                          <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                          <span>{point}</span>
                         </li>
                       ))}
                     </ul>
@@ -437,14 +437,15 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark-950">
+      <section className="py-12 sm:py-16 lg:py-20 bg-dark-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-signika font-semibold text-gray-300 mb-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-signika font-semibold text-gray-300 mb-6 sm:mb-8 break-words">
             {t('cta.text')}
           </h2>
           
-          <button className="btn-primary text-lg px-8 py-4">
-            {t('cta.button')}
+          <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 min-h-[44px] w-auto max-w-[280px] sm:max-w-full mx-auto whitespace-normal text-center leading-tight">
+            <span className="hidden sm:inline">{t('cta.button')}</span>
+            <span className="sm:hidden">Wypełnij formularz</span>
           </button>
         </div>
       </section>
