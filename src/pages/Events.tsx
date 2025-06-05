@@ -5,191 +5,30 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import type { EventClickArg } from '@fullcalendar/core';
+import { useEvents } from '../hooks/useEvents';
 
-interface EventDetails {
-  id: string;
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  description: string;
-  category: 'workshop' | 'webinar' | 'conference' | 'meetup';
-  featured: boolean;
-}
+// Use the type from the hook instead of defining our own
+type EventDetails = ReturnType<typeof useEvents>['events'][0];
 
 const Events = () => {
   const { t } = useTranslation();
   const [selectedEvent, setSelectedEvent] = useState<EventDetails | null>(null);
   const calendarRef = useRef<FullCalendar>(null);
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'workshop':
-        return '#70fcfe'; // primary-400 - turkusowy dla warsztatów
-      case 'webinar':
-        return '#26e4e7'; // primary-600 - ciemniejszy turkus dla webinarów  
-      case 'conference':
-        return '#1ea2b4'; // primary-700 - ciemny turkus dla konferencji
-      case 'meetup':
-        return '#1f788c'; // primary-800 - najciemniejszy turkus dla meetupów
-      default:
-        return '#70fcfe'; // default primary-400
-    }
-  };
-
-  const getCategoryLabel = (category: string) => {
-    switch (category) {
-      case 'workshop':
-        return 'Warsztat';
-      case 'webinar':
-        return 'Webinar';
-      case 'conference':
-        return 'Konferencja';
-      case 'meetup':
-        return 'Meetup';
-      default:
-        return category;
-    }
-  };
-
-  const events = [
-    {
-      id: '1',
-      title: 'Warsztat: Etyka AI',
-      start: '2025-02-15',
-      backgroundColor: getCategoryColor('workshop'),
-      borderColor: getCategoryColor('workshop'),
-      extendedProps: {
-        time: '14:00',
-        location: 'Poznań, Kampus UAM',
-        description: 'Warsztat poświęcony etycznym aspektom sztucznej inteligencji. Omówimy najważniejsze wyzwania i dobre praktyki.',
-        category: 'workshop',
-        featured: true
-      }
-    },
-    {
-      id: '2',
-      title: 'Konferencja AI Poland',
-      start: '2025-03-15',
-      backgroundColor: getCategoryColor('conference'),
-      borderColor: getCategoryColor('conference'),
-      extendedProps: {
-        time: '09:00',
-        location: 'Warszawa, Centrum Kongresowe',
-        description: 'Doroczna konferencja poświęcona tematyce sztucznej inteligencji w Polsce.',
-        category: 'conference',
-        featured: false
-      }
-    },
-    {
-      id: '3',
-      title: 'Webinar: AI w biznesie',
-      start: '2025-02-22',
-      backgroundColor: getCategoryColor('webinar'),
-      borderColor: getCategoryColor('webinar'),
-      extendedProps: {
-        time: '18:00',
-        location: 'Online',
-        description: 'Praktyczne omówienie zastosowań AI w różnych branżach.',
-        category: 'webinar',
-        featured: false
-      }
-    },
-    {
-      id: '4',
-      title: 'Meetup: Przyszłość AI',
-      start: '2025-02-08',
-      backgroundColor: getCategoryColor('meetup'),
-      borderColor: getCategoryColor('meetup'),
-      extendedProps: {
-        time: '19:00',
-        location: 'Poznań, Google Campus',
-        description: 'Nieformalne spotkanie społeczności AI. Dyskusja o najnowszych trendach i możliwościach współpracy.',
-        category: 'meetup',
-        featured: false
-      }
-    },
-    {
-      id: '5',
-      title: 'Warsztat: Machine Learning',
-      start: '2025-03-05',
-      backgroundColor: getCategoryColor('workshop'),
-      borderColor: getCategoryColor('workshop'),
-      extendedProps: {
-        time: '10:00',
-        location: 'Kraków, AGH',
-        description: 'Praktyczny warsztat wprowadzający do podstaw machine learning i uczenia maszynowego.',
-        category: 'workshop',
-        featured: true
-      }
-    },
-    {
-      id: '6',
-      title: 'Webinar: Regulacje AI',
-      start: '2025-02-28',
-      backgroundColor: getCategoryColor('webinar'),
-      borderColor: getCategoryColor('webinar'),
-      extendedProps: {
-        time: '16:00',
-        location: 'Online',
-        description: 'Przegląd aktualnych regulacji prawnych dotyczących AI w Europie i Polsce.',
-        category: 'webinar',
-        featured: false
-      }
-    },
-    {
-      id: '7',
-      title: 'Konferencja: AI w Medycynie',
-      start: '2025-04-10',
-      backgroundColor: getCategoryColor('conference'),
-      borderColor: getCategoryColor('conference'),
-      extendedProps: {
-        time: '09:30',
-        location: 'Wrocław, Uniwersytet Medyczny',
-        description: 'Konferencja naukowa poświęcona zastosowaniom sztucznej inteligencji w medycynie.',
-        category: 'conference',
-        featured: true
-      }
-    },
-    {
-      id: '8',
-      title: 'Meetup: AI Startup',
-      start: '2025-03-20',
-      backgroundColor: getCategoryColor('meetup'),
-      borderColor: getCategoryColor('meetup'),
-      extendedProps: {
-        time: '18:30',
-        location: 'Gdańsk, Olivia Business Centre',
-        description: 'Spotkanie dla przedsiębiorców i startupowców zainteresowanych AI.',
-        category: 'meetup',
-        featured: false
-      }
-    }
-  ];
-
-  const upcomingEvents: EventDetails[] = events.map(event => ({
-    id: event.id,
-    title: event.title,
-    date: new Date(event.start).toLocaleDateString('pl-PL'),
-    time: event.extendedProps.time,
-    location: event.extendedProps.location,
-    description: event.extendedProps.description,
-    category: event.extendedProps.category as 'workshop' | 'webinar' | 'conference' | 'meetup',
-    featured: event.extendedProps.featured
-  }));
+  
+  // Use the new events hook
+  const { events: upcomingEvents, calendarEvents, getCategoryColor, getCategoryLabel } = useEvents();
+  
+  // Debug: log the events data
+  console.log('upcomingEvents:', upcomingEvents);
+  console.log('calendarEvents:', calendarEvents);
 
   const handleEventClick = (clickInfo: EventClickArg) => {
-    const eventData: EventDetails = {
-      id: clickInfo.event.id,
-      title: clickInfo.event.title,
-      date: clickInfo.event.start?.toLocaleDateString('pl-PL') || '',
-      time: clickInfo.event.extendedProps.time,
-      location: clickInfo.event.extendedProps.location,
-      description: clickInfo.event.extendedProps.description,
-      category: clickInfo.event.extendedProps.category,
-      featured: clickInfo.event.extendedProps.featured
-    };
-    setSelectedEvent(eventData);
+    // Find the event in our data by ID
+    const event = upcomingEvents.find(e => e.id === clickInfo.event.id);
+    if (event) {
+      console.log('Selected event:', event);
+      setSelectedEvent(event);
+    }
   };
 
   return (
@@ -210,7 +49,7 @@ const Events = () => {
       {/* Calendar Section */}
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Custom header with Today and New Event buttons */}
+          {/* Custom header with Today button */}
           <div className="flex justify-between items-center mb-6">
             <div></div> {/* Empty space for left side */}
             <div className="flex gap-2">
@@ -223,16 +62,6 @@ const Events = () => {
                 className="px-3 py-1.5 bg-primary-400 hover:bg-primary-500 text-dark-950 font-montserrat font-medium rounded-md transition-all duration-200 text-sm"
               >
                 Dzisiaj
-              </button>
-              <button 
-                onClick={() => {
-                  // Handle new event click - you can implement this
-                  console.log('New event clicked');
-                }}
-                className="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-montserrat font-medium rounded-md transition-all duration-200 text-sm"
-              >
-                <span className="hidden sm:inline">Nowe wydarzenie</span>
-                <span className="sm:hidden">Nowe</span>
               </button>
             </div>
           </div>
@@ -425,7 +254,7 @@ const Events = () => {
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek'
               }}
-              events={events}
+              events={calendarEvents}
               eventClick={handleEventClick}
               height="auto"
               locale="pl"
@@ -450,7 +279,7 @@ const Events = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-montserrat font-bold text-dark-950 mb-6 sm:mb-8">
-              Nadchodzące wydarzenia
+              {t('events.upcoming.title')}
             </h2>
           </div>
 
@@ -495,47 +324,34 @@ const Events = () => {
                 </p>
                 
                 <div className="flex flex-col gap-3">
-                  <button 
-                    onClick={() => {
-                      // Handle registration
-                      console.log('Register for event:', event.id);
-                    }}
-                    className="w-full bg-primary-400 hover:bg-primary-500 text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200"
-                  >
-                    Zapisz się
-                  </button>
+                  {event.eventUrl ? (
+                    <a 
+                      href={event.eventUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-primary-400 hover:bg-primary-500 text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center inline-block"
+                    >
+                      {t('events.buttons.register')}
+                    </a>
+                  ) : (
+                    <button 
+                      onClick={() => {
+                        console.log('Register for event:', event.id);
+                      }}
+                      className="w-full bg-primary-400 hover:bg-primary-500 text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+                    >
+                      {t('events.buttons.register')}
+                    </button>
+                  )}
                   <button 
                     onClick={() => setSelectedEvent(event)}
                     className="w-full border-2 border-primary-400 text-black hover:bg-primary-400 hover:text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-lg transition-all duration-200"
                   >
-                    Więcej info
+                    {t('events.buttons.moreInfo')}
                   </button>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-12 sm:py-20 bg-dark-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-bold text-white mb-6">
-            Nie przegap żadnego wydarzenia
-          </h2>
-          <p className="text-lg font-signika text-gray-300 mb-8 max-w-2xl mx-auto">
-            Zapisz się do naszego newslettera i otrzymuj informacje o nadchodzących wydarzeniach
-          </p>
-          
-          <div className="max-w-md mx-auto space-y-4">
-            <input
-              type="email"
-              placeholder="Twój adres email"
-              className="w-full px-4 py-3 rounded-lg bg-dark-800 border border-dark-700 text-white placeholder-gray-400 focus:outline-none focus:border-primary-400 font-signika"
-            />
-            <button className="w-full bg-primary-400 hover:bg-primary-500 text-dark-950 font-montserrat font-semibold py-3 px-6 rounded-full transition-all duration-200">
-              Zapisz się na newsletter
-            </button>
           </div>
         </div>
       </section>
@@ -557,29 +373,25 @@ const Events = () => {
                 </button>
               </div>
               
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3">
-                  <span>📅</span>
-                  <span className="font-signika font-semibold text-lg">{selectedEvent.date}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span>⏰</span>
-                  <span className="font-signika text-lg">{selectedEvent.time}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span>📍</span>
-                  <span className="font-signika text-lg">{selectedEvent.location}</span>
-                </div>
+              <div className="text-dark-700 font-signika leading-relaxed mb-8 text-lg whitespace-pre-line">
+                {selectedEvent.fullDescription || selectedEvent.description}
               </div>
               
-              <p className="text-dark-700 font-signika leading-relaxed mb-8 text-lg">
-                {selectedEvent.description}
-              </p>
-              
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-primary flex-1">
-                  {t('events.buttons.register')}
-                </button>
+                {selectedEvent.eventUrl ? (
+                  <a 
+                    href={selectedEvent.eventUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex-1 text-center inline-block"
+                  >
+                    {t('events.buttons.register')}
+                  </a>
+                ) : (
+                  <button className="btn-primary flex-1">
+                    {t('events.buttons.register')}
+                  </button>
+                )}
                 <button 
                   onClick={() => setSelectedEvent(null)}
                   className="btn-secondary flex-1"

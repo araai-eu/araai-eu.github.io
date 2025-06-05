@@ -98,13 +98,13 @@
   },
   "events": {
     "calendar": {
-      "title": "Kalendarz Wydarzeń"
+      "title": "Wydarzenia"
     },
     "upcoming": {
-      "title": "Nadchodzące Wydarzenia"
+      "title": "Nadchodzące wydarzenia"
     },
     "buttons": {
-      "moreInfo": "Więcej informacji",
+      "moreInfo": "Więcej info",
       "register": "Zapisz się",
       "close": "Zamknij"
     }

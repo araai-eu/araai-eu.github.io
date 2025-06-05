@@ -443,10 +443,15 @@ const Home = () => {
             {t('cta.text')}
           </h2>
           
-          <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 min-h-[44px] w-auto max-w-[280px] sm:max-w-full mx-auto whitespace-normal text-center leading-tight">
+          <a 
+            href="https://docs.google.com/forms/d/15u2FKUQBhhR_mV65-3D3sRSU2q7oiHzDZ2R-MDpZv8g/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 min-h-[44px] w-auto max-w-[280px] sm:max-w-full mx-auto whitespace-normal text-center leading-tight inline-block"
+          >
             <span className="hidden sm:inline">{t('cta.button')}</span>
             <span className="sm:hidden">Wypełnij formularz</span>
-          </button>
+          </a>
         </div>
       </section>
     </div>

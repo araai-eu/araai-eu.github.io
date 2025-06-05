@@ -1,0 +1,32 @@
+{
+  "pl": [
+    {
+      "id": "data-campus-3",
+      "title": "Data on Campus #3",
+      "date": "2025-06-07",
+      "time": "09:00",
+      "location": "Wydział Matematyki i Informatyki UAM, Poznań",
+      "category": "conference",
+      "featured": true,
+      "shortDescription": "Konferencja skierowana do osób zainteresowanych tematyką danych i AI zarówno od strony badawczej, technicznej, jak i do przedstawicieli biznesu.",
+      "fullDescription": "Konferencja skierowana jest do osób zainteresowanych tematyką danych i AI zarówno od strony badawczej, technicznej, jak i do przedstawicieli biznesu. Po raz kolejny będziemy mieć możliwość spotkać się, porozmawiać i posłuchać ekspertów omawiających najnowsze rozwiązania, technologie i wyzwania z tych obszarów. To idealne miejsce na połączenie ludzi nauki, studentów i świata biznesu.\n\nPodczas tegorocznej, trzeciej edycji przyjrzymy się zaawansowanym aspektom AI: omówione zostaną zagadnienia związane z multimodalnością i przetwarzaniem różnych formatów danych, rozumowaniem modeli, zastosowaniem agentów i zaawansowanego RAG, a także praktycznymi wdrożeniami w biznesie. Skupimy szczególną uwagę na tym, co się dzieje w Polsce - polskie LLM-y, zagadnienia prawne i etyczne oraz dwie polskie Fabryki AI, które spotkają się podczas panelu!",
+      "registrationUrl": "https://wmi.amu.edu.pl/zycie-naukowe/wyklady-i-seminaria/data-on-campus/data-on-campus-3",
+      "tags": ["AI", "data", "multimodal", "RAG", "LLM", "Poland"]
+    }
+  ],
+  "en": [
+    {
+      "id": "data-campus-3",
+      "title": "Data on Campus #3",
+      "date": "2025-06-07",
+      "time": "09:00",
+      "location": "Faculty of Mathematics and Computer Science UAM, Poznań",
+      "category": "conference",
+      "featured": true,
+      "shortDescription": "Conference aimed at people interested in data and AI from research, technical, and business perspectives.",
+      "fullDescription": "The conference is aimed at people interested in data and AI from both research, technical, and business perspectives. Once again, we will have the opportunity to meet, talk, and listen to experts discussing the latest solutions, technologies, and challenges in these areas. It's an ideal place to connect people from science, students, and the business world.\n\nDuring this year's third edition, we will look at advanced aspects of AI: topics related to multimodality and processing of various data formats, model reasoning, the use of agents and advanced RAG, as well as practical business implementations will be discussed. We will pay special attention to what is happening in Poland - Polish LLMs, legal and ethical issues, and two Polish AI Factories that will meet during the panel!",
+      "registrationUrl": "https://wmi.amu.edu.pl/zycie-naukowe/wyklady-i-seminaria/data-on-campus/data-on-campus-3",
+      "tags": ["AI", "data", "multimodal", "RAG", "LLM", "Poland"]
+    }
+  ]
+} 

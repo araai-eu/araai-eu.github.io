@@ -92,13 +92,13 @@
   },
   "events": {
     "calendar": {
-      "title": "Events Calendar"
+      "title": "Events"
     },
     "upcoming": {
       "title": "Upcoming Events"
     },
     "buttons": {
-      "moreInfo": "More information",
+      "moreInfo": "More info",
       "register": "Register",
       "close": "Close"
     }
