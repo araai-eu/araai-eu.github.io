@@ -126,3 +126,4 @@ CMD ["npm", "run", "preview"]
 
 © 2025 ARAAI - Polish AI for All Initiative
 # Deployment trigger
+# Fixed deployment
