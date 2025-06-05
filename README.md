@@ -125,3 +125,4 @@ CMD ["npm", "run", "preview"]
 ## 📄 Licencja
 
 © 2025 ARAAI - Polish AI for All Initiative
+# Deployment trigger
