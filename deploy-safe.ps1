@@ -12,8 +12,11 @@ if (-not (Test-Path "dist")) {
 $TempDir = "temp-deploy-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 Write-Host "📁 Tworzę tymczasowy katalog: $TempDir" -ForegroundColor Yellow
 
-# Copy dist to temp directory
-Copy-Item -Path "dist" -Destination $TempDir -Recurse
+# Create temp directory first
+New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
+
+# Copy contents of dist to temp directory
+Copy-Item -Path "dist\*" -Destination $TempDir -Recurse
 
 # Go to temp directory
 Set-Location $TempDir
