@@ -1,4 +1,9 @@
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { i18n } = useTranslation();
+  
   return (
     <footer className="bg-dark-950 border-t border-dark-800 py-8 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,17 +25,17 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 text-center">
+            <Link 
+              to="/polityka-prywatnosci" 
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
+            >
+              {i18n.language === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy'}
+            </Link>
             <a 
               href="#" 
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
             >
-              Privacy Policy
-            </a>
-            <a 
-              href="#" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
-            >
-              Cookie settings
+              {i18n.language === 'pl' ? 'Ustawienia cookies' : 'Cookie settings'}
             </a>
             <a 
               href="mailto:office@araai.org" 
