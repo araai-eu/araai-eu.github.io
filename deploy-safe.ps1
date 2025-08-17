@@ -39,5 +39,5 @@ git push --force https://github.com/araai-eu/araai-eu.github.io.git main
 Set-Location ..
 Remove-Item -Path $TempDir -Recurse -Force
 
-Write-Host "✅ Deployment zakończony!" -ForegroundColor Green
-Write-Host "🌍 Strona: https://araai-eu.github.io/" -ForegroundColor Cyan 
+Write-Host "Deployment zakonczony!" -ForegroundColor Green
+Write-Host "Strona: https://araai-eu.github.io/" -ForegroundColor Cyan 
