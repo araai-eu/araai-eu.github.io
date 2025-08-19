@@ -3,13 +3,15 @@
     "home": "Home",
     "about": "O nas", 
     "events": "Wydarzenia",
-    "news": "Aktualności"
+    "activity": "Aktywność",
+    "news": "Aktualności",
+    "joinUs": "Dołącz do nas"
   },
   "hero": {
     "welcome": "Witamy w",
     "araai": "ARAAI",
-    "subtitle": "Społeczności ekspertów, która rozwija AI opartą na wiedzy, wartościach i działaniu.",
-    "description": "Dostarczamy wiedzę, tworzymy standardy, wpływamy na prawo i wspieramy wdrożenia AI."
+    "subtitle": "Jesteśmy społecznością AI, która wspólnie napędza innowacje i wspiera przełomowe idee,",
+    "description": "kształtując przyszłość polskiego społeczeństwa, biznesu i nauki."
   },
   "mission": {
     "part1": "Wprowadzamy AI odpowiedzialnie i z myślą o ludziach. Tworzymy praktyczne narzędzia,",
@@ -18,8 +20,8 @@
   },
   "aiChanges": {
     "title": "AI zmienia wszystko-",
-    "subtitle": "- zdrowie, edukację, pracę, bezpieczeństwo.....",
-    "question": "...tylko kto o tym wszystkim decyduje? Kto ustala, co jest \"dobre\", \"legalne\", \"etyczne\"? Kto ma odwagę zapytać: dla kogo właściwie jest ta przyszłość, którą tworzymy?"
+    "subtitle": "Technologia nie czeka, aż społeczeństwo będzie gotowe. Sztuczna inteligencja już dziś wpływa na decyzje, które dotyczą nas wszystkich: zdrowie, edukację, pracę, bezpieczeństwo.",
+    "question": "Tylko kto o tym wszystkim decyduje? Kto ustala, co jest \"dobre\", \"legalne\", \"etyczne\"? Kto ma odwagę zapytać: dla kogo właściwie jest ta przyszłość, którą tworzymy?"
   },
   "whyAraai": {
     "title": "Dlaczego istnieje ARAAI?",
@@ -34,7 +36,7 @@
   "sections": {
     "forWho": {
       "title": "Dla Kogo?",
-      "content": "Łączymy naukowców, innowatorów, liderów biznesu i decydentów, by wspólnie rozwijać sztuczną inteligencję, która służy ludziom, wzmacnia gospodarkę i buduje świadome społeczeństwo."
+      "content": "Łączymy naukowców, wizjonerów, liderów biznesu i decydentów, by wspólnie rozwijać i wdrażać sztuczną inteligencję, która służy ludziom i wzmacnia gospodarkę. Budujemy świadomość AI w społeczeństwie."
     },
     "experts": {
       "title": "Eksperci i badacze",
@@ -163,6 +165,78 @@
       "audit": {
         "title": "Komisja Rewizyjna"
       }
+    }
+  },
+  "activity": {
+    "hero": {
+      "title": "Nasza Aktywność",
+      "description": "Budujemy mosty między nauką, biznesem i społeczeństwem. Nasze działania to konferencje, publikacje, warsztaty i współpraca z wiodącymi instytucjami w Polsce."
+    },
+    "achievements": {
+      "title": "Osiągnięcia",
+      "aiPublic": {
+        "title": "Wydarzenie AI w publicu",
+        "description": "Organizacja wydarzenia promującego sztuczną inteligencję w sektorze publicznym."
+      },
+      "publication": {
+        "title": "Współtworzenie publikacji",
+        "description": "Współautorstwo publikacji naukowych w dziedzinie AI.",
+        "linkText": "Zobacz publikację"
+      },
+      "materials": {
+        "title": "Materiały pokonferencyjne",
+        "description": "Przygotowanie i dystrybucja materiałów edukacyjnych z naszych wydarzeń."
+      },
+      "cooperation": {
+        "title": "Współpraca z firmami i uczelniami",
+        "description": "Partnerstwa strategiczne z wiodącymi instytucjami akademickimi i biznesowymi."
+      },
+      "presentations": {
+        "title": "Wystąpienia konferencyjne",
+        "description": "Prezentacje na Data on Campus i Prawnik 2.0."
+      }
+    }
+  },
+  "joinUs": {
+    "hero": {
+      "title": "Dołącz do ARAAI",
+      "description": "Zostań częścią społeczności, która kształtuje przyszłość AI w Polsce. Razem tworzymy standardy, edukujemy i wdrażamy odpowiedzialne rozwiązania sztucznej inteligencji."
+    },
+    "process": {
+      "title": "Jak dołączyć?",
+      "step1": {
+        "title": "Wypełnij formularz",
+        "description": "Kliknij przycisk poniżej i wypełnij formularz zgłoszeniowy"
+      },
+      "step2": {
+        "title": "Czekaj na kontakt",
+        "description": "Skontaktujemy się z Tobą w ciągu kilku dni"
+      },
+      "step3": {
+        "title": "Dołącz do społeczności",
+        "description": "Po akceptacji zostaniesz członkiem ARAAI"
+      },
+      "ctaButton": "Wypełnij formularz zgłoszeniowy"
+    },
+    "fees": {
+      "title": "Składki członkowskie",
+      "annual": {
+        "title": "Składki roczne:",
+        "regular": "Składka regularna: 200 PLN",
+        "reduced": "Składka ulgowa: 100 PLN (50% składki regularnej)",
+        "honorary": "Składka honorowa: 0 PLN"
+      },
+      "discounts": {
+        "title": "Ulgi przysługują:",
+        "youth": "Młodzieży do 20 roku życia",
+        "students": "Studentom i doktorantom do 26 roku życia",
+        "special": "Emerytom, rencistom, osobom z niepełnosprawnością"
+      }
+    },
+    "legal": {
+      "title": "Informacje prawne",
+      "description": "Przystępując do stowarzyszenia, wyrażasz zgodę na przetwarzanie danych osobowych zgodnie z RODO.",
+      "privacyLink": "Polityka prywatności"
     }
   }
 } 

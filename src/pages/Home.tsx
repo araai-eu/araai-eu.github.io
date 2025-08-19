@@ -41,22 +41,15 @@ const getTargetGroups = (t: ReturnType<typeof useTranslation>['t']) => [
     points: t('sections.enthusiasts.points', { returnObjects: true }),
     bgColor: 'bg-gradient-to-r from-primary-100 to-primary-200',
     barColor: '#1ea2b4'  // primary-700
-  },
-  {
-    id: 'skladki',
-    title: t('sections.fees.title'),
-    content: null,
-    bgColor: 'bg-white',
-    isSpecial: true,
-    barColor: '#1f788c'  // primary-800
   }
 ];
 
 const Home = () => {
   const [currentSection, setCurrentSection] = useState(0);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const targetGroups = getTargetGroups(t);
+  const isEnglish = i18n.language === 'en';
 
   return (
     <div className="pt-16">
@@ -76,7 +69,7 @@ const Home = () => {
             {/* Left side - Text content */}
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-4 sm:mb-6 leading-tight">
-                {t('hero.welcome')} <span className="gradient-text">{t('hero.araai')}</span>,
+                {t('hero.welcome')} <span className="text-primary-400">{t('hero.araai')}</span>,
               </h1>
               
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-signika font-semibold text-primary-300 mb-3 sm:mb-4">
@@ -145,18 +138,32 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
             {/* Left column */}
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-dark-950 mb-3 sm:mb-4 leading-tight break-words">
+              <h2 className={`${isEnglish ? 'text-2xl sm:text-3xl md:text-3xl lg:text-4xl' : 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl'} font-montserrat font-bold text-dark-950 mb-3 sm:mb-4 leading-tight break-words`}>
                 {t('aiChanges.title')}
               </h2>
               <p className="text-base sm:text-lg font-signika text-dark-700 leading-relaxed break-words">
-                {t('aiChanges.subtitle')}
+                {isEnglish ? (
+                  <>
+                    Technology doesn't wait for society to be ready. Artificial intelligence is<br className="hidden lg:block" />
+                    already affecting decisions that concern us all: health, education, work, security.
+                  </>
+                ) : (
+                  t('aiChanges.subtitle')
+                )}
               </p>
             </div>
             
-            {/* Right column - positioned lower */}
-            <div className="lg:mt-20 mt-4 sm:mt-6">
+            {/* Right column - aligned to start at the end of left column text */}
+            <div className="lg:pt-24 mt-4 sm:mt-6">
               <p className="text-base sm:text-lg md:text-xl font-signika text-dark-950 leading-relaxed break-words">
-                {t('aiChanges.question')}
+                {isEnglish ? (
+                  <>
+                    But who decides about all this? Who determines what is<br className="hidden lg:block" />
+                    "good", "legal", "ethical"? Who has the courage to ask: for whom is this future we are creating?
+                  </>
+                ) : (
+                  t('aiChanges.question')
+                )}
               </p>
             </div>
           </div>
@@ -275,67 +282,19 @@ const Home = () => {
                 </h2>
                 <div className="w-24 h-1 bg-primary-400 mb-8"></div>
                 
-                {targetGroups[currentSection].isSpecial ? (
-                  /* Składki Section */
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                      <h3 className="text-xl font-montserrat font-semibold text-primary-400 mb-6">
-                        {t('sections.fees.annual.title')}
-                      </h3>
-                      <ul className="space-y-4 text-lg font-signika text-dark-950">
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.annual.regular')}
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.annual.reduced')}
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.annual.honorary')}
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-montserrat font-semibold text-primary-400 mb-6">
-                        {t('sections.fees.discounts.title')}
-                      </h3>
-                      <ul className="space-y-4 text-lg font-signika text-dark-950">
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.discounts.youth')}
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.discounts.students')}
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-primary-400 mr-3">•</span>
-                          {t('sections.fees.discounts.special')}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                ) : (
-                  /* Regular sections */
-                  <>
-                    <p className="text-lg font-signika text-dark-950 max-w-4xl leading-relaxed mb-8">
-                      {targetGroups[currentSection].content}
-                    </p>
-                    
-                    {targetGroups[currentSection].points && (
-                      <ul className="space-y-4 text-lg font-signika text-dark-950">
-                        {(targetGroups[currentSection].points as string[]).map((point: string, index: number) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-primary-400 mr-3">•</span>
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </>
+                <p className="text-lg font-signika text-dark-950 max-w-4xl leading-relaxed mb-8">
+                  {targetGroups[currentSection].content}
+                </p>
+                
+                {targetGroups[currentSection].points && (
+                  <ul className="space-y-4 text-lg font-signika text-dark-950">
+                    {(targetGroups[currentSection].points as string[]).map((point: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-primary-400 mr-3">•</span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             </div>
@@ -369,67 +328,19 @@ const Home = () => {
               </h2>
               <div className="w-12 sm:w-16 h-1 bg-primary-400 mb-4 sm:mb-6"></div>
               
-              {targetGroups[currentSection].isSpecial ? (
-                /* Składki Section - Mobile */
-                <div className="space-y-6 sm:space-y-8">
-                  <div>
-                    <h3 className="text-base sm:text-lg font-montserrat font-semibold text-primary-400 mb-3 sm:mb-4 break-words">
-                      {t('sections.fees.annual.title')}
-                    </h3>
-                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.annual.regular')}</span>
-                      </li>
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.annual.reduced')}</span>
-                      </li>
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.annual.honorary')}</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-base sm:text-lg font-montserrat font-semibold text-primary-400 mb-3 sm:mb-4 break-words">
-                      {t('sections.fees.discounts.title')}
-                    </h3>
-                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.discounts.youth')}</span>
-                      </li>
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.discounts.students')}</span>
-                      </li>
-                      <li className="flex items-start break-words">
-                        <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                        <span>{t('sections.fees.discounts.special')}</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              ) : (
-                /* Regular sections - Mobile */
-                <>
-                  <p className="text-sm sm:text-base font-signika text-dark-950 leading-relaxed mb-4 sm:mb-6 break-words">
-                    {targetGroups[currentSection].content}
-                  </p>
-                  
-                  {targetGroups[currentSection].points && (
-                    <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
-                      {(targetGroups[currentSection].points as string[]).map((point: string, index: number) => (
-                        <li key={index} className="flex items-start break-words">
-                          <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </>
+              <p className="text-sm sm:text-base font-signika text-dark-950 leading-relaxed mb-4 sm:mb-6 break-words">
+                {targetGroups[currentSection].content}
+              </p>
+              
+              {targetGroups[currentSection].points && (
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base font-signika text-dark-950">
+                  {(targetGroups[currentSection].points as string[]).map((point: string, index: number) => (
+                    <li key={index} className="flex items-start break-words">
+                      <span className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           </div>

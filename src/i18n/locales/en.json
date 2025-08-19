@@ -2,8 +2,8 @@
   "hero": {
     "welcome": "Welcome to",
     "araai": "ARAAI",
-    "subtitle": "Community of experts developing AI based on knowledge, values and action.",
-    "description": "We provide knowledge, create standards, influence law and support AI implementations."
+    "subtitle": "We are an AI community that jointly drives innovation and supports breakthrough ideas,",
+    "description": "shaping the future of Polish society, business and science."
   },
   "mission": {
     "part1": "We introduce AI responsibly and with people in mind. We create practical tools,",
@@ -12,8 +12,8 @@
   },
   "aiChanges": {
     "title": "AI changes everything-",
-    "subtitle": "- health, education, work, security.....",
-    "question": "...but who decides about all this? Who determines what is \"good\", \"legal\", \"ethical\"? Who has the courage to ask: for whom is this future we are creating?"
+    "subtitle": "Technology doesn't wait for society to be ready. Artificial intelligence is already affecting decisions that concern us all: health, education, work, security.",
+    "question": "But who decides about all this? Who determines what is \"good\", \"legal\", \"ethical\"? Who has the courage to ask: for whom is this future we are creating?"
   },
   "whyAraai": {
     "title": "Why does ARAAI exist?",
@@ -28,7 +28,7 @@
   "sections": {
     "forWho": {
       "title": "For Who?",
-      "content": "We connect scientists, innovators, business leaders and decision-makers to jointly develop artificial intelligence that serves people, strengthens the economy and builds a conscious society."
+      "content": "We connect scientists, visionaries, business leaders and decision-makers to jointly develop and implement artificial intelligence that serves people and strengthens the economy. We build AI awareness in society."
     },
     "experts": {
       "title": "Experts and researchers",
@@ -163,6 +163,80 @@
     "home": "Home",
     "about": "About us", 
     "events": "Events",
-    "news": "News"
+    "activity": "Activity",
+    "news": "News",
+    "joinUs": "Join us"
+  },
+  "activity": {
+    "hero": {
+      "title": "Our Activity",
+      "description": "We build bridges between science, business and society. Our activities include conferences, publications, workshops and cooperation with leading institutions in Poland."
+    },
+    "achievements": {
+      "title": "Achievements",
+      "aiPublic": {
+        "title": "AI in Public Event",
+        "description": "Organization of an event promoting artificial intelligence in the public sector."
+      },
+      "publication": {
+        "title": "Co-authoring Publications",
+        "description": "Co-authorship of scientific publications in the field of AI.",
+        "linkText": "View publication"
+      },
+      "materials": {
+        "title": "Conference Materials",
+        "description": "Preparation and distribution of educational materials from our events."
+      },
+      "cooperation": {
+        "title": "Cooperation with Companies and Universities",
+        "description": "Strategic partnerships with leading academic and business institutions."
+      },
+      "presentations": {
+        "title": "Conference Presentations",
+        "description": "Presentations at Data on Campus and Prawnik 2.0."
+      }
+    }
+  },
+  "joinUs": {
+    "hero": {
+      "title": "Join ARAAI",
+      "description": "Become part of the community that shapes the future of AI in Poland. Together we create standards, educate and implement responsible artificial intelligence solutions."
+    },
+    "process": {
+      "title": "How to join?",
+      "step1": {
+        "title": "Fill out the form",
+        "description": "Click the button below and fill out the application form"
+      },
+      "step2": {
+        "title": "Wait for contact",
+        "description": "We will contact you within a few days"
+      },
+      "step3": {
+        "title": "Join the community",
+        "description": "After acceptance, you will become a member of ARAAI"
+      },
+      "ctaButton": "Fill out the application form"
+    },
+    "fees": {
+      "title": "Membership fees",
+      "annual": {
+        "title": "Annual fees:",
+        "regular": "Regular fee: 200 PLN",
+        "reduced": "Reduced fee: 100 PLN (50% of regular fee)",
+        "honorary": "Honorary fee: 0 PLN"
+      },
+      "discounts": {
+        "title": "Discounts apply to:",
+        "youth": "Youth up to 20 years of age",
+        "students": "Students and doctoral students up to 26 years of age",
+        "special": "Retirees, pensioners, people with disabilities"
+      }
+    },
+    "legal": {
+      "title": "Legal Information",
+      "description": "By joining the association, you consent to the processing of personal data in accordance with GDPR.",
+      "privacyLink": "Privacy Policy"
+    }
   }
 } 

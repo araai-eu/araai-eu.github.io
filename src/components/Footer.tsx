@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Copyright */}
           <div className="text-gray-400 font-signika flex flex-col items-center md:items-start space-y-2 text-center md:text-left">
-            <div className="text-sm sm:text-base">© 2025 ARAAI</div>
-            <div className="text-xs sm:text-sm">
+            <div className="text-base sm:text-lg">© 2025 ARAAI</div>
+            <div className="text-sm sm:text-base">
               <a 
                 href="https://www.ux-zoom.com/" 
                 target="_blank" 
@@ -27,19 +27,19 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 text-center">
             <Link 
               to="/polityka-prywatnosci" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-base sm:text-lg py-2 px-2 min-h-[44px] flex items-center"
             >
               {i18n.language === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy'}
             </Link>
             <a 
               href="#" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-base sm:text-lg py-2 px-2 min-h-[44px] flex items-center"
             >
               {i18n.language === 'pl' ? 'Ustawienia cookies' : 'Cookie settings'}
             </a>
             <a 
               href="mailto:office@araai.org" 
-              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-sm sm:text-base py-2 px-2 min-h-[44px] flex items-center break-all"
+              className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-base sm:text-lg py-2 px-2 min-h-[44px] flex items-center break-all"
             >
               <span className="hidden sm:inline">Email: </span>office@araai.org
             </a>

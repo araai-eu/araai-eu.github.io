@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
 import News from './pages/News';
+import Activity from './pages/Activity';
+import JoinUs from './pages/JoinUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/o-nas" element={<About />} />
           <Route path="/wydarzenia" element={<Events />} />
           <Route path="/aktualnosci" element={<News />} />
+          <Route path="/aktywnosc" element={<Activity />} />
+          <Route path="/dolacz" element={<JoinUs />} />
           <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
         </Routes>
       </Layout>

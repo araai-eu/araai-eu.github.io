@@ -10,8 +10,10 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: t('navigation.home') },
     { path: '/o-nas', label: t('navigation.about') },
-    { path: '/wydarzenia', label: t('navigation.events') },
+    { path: '/aktywnosc', label: t('navigation.activity') },
+    // { path: '/wydarzenia', label: t('navigation.events') }, // Hidden but not removed
     { path: '/aktualnosci', label: t('navigation.news') },
+    { path: '/dolacz', label: t('navigation.joinUs') },
   ];
 
   const isActive = (path: string) => location.pathname === path;

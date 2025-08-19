@@ -40,10 +40,21 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, #70fcfe 0%, #85fcfe 50%, #2afefe 100%);
+    color: #26e4e7; /* Primary fallback color */
+    background-image: linear-gradient(135deg, #70fcfe 0%, #85fcfe 50%, #2afefe 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Fallback for browsers that don't support background-clip: text */
+  @supports not (-webkit-background-clip: text) {
+    .gradient-text {
+      color: #26e4e7;
+      background: none;
+    }
   }
   
   .btn-primary {

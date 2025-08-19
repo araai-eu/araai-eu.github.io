@@ -108,20 +108,9 @@ const About = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-white">
-      {/* O nas Hero Section with Vision - Combined */}
+      {/* Nasza Wizja Section */}
       <section className="py-12 sm:py-20 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 relative overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight">
-            <span className="gradient-text">{t('about.title')}</span>
-          </h1>
-          
-          <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-base sm:text-lg font-signika text-gray-300 leading-relaxed">
-              {t('about.subtitle')}
-            </p>
-          </div>
-
-          {/* Nasza Wizja - now part of same section */}
           <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold mb-8 text-primary-400">
             {t('about.vision.title')}
           </h2>
