@@ -42,7 +42,7 @@ const About = () => {
       name: 'Paweł Dudko', 
       role: 'Radca Prawny', 
       roleEN: 'Attorney-at-law',
-      image: '/team/Pawel_Dudko.png',
+      image: '/team/Pawel_Dudko.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/pawe%C5%82-dudko-1b99481b3/',
       bio: 'Współpracuje z STX Next oraz Trenda Group. Od 8 lat związany z branżą nowych technologii, w tym jako prawnik wewnętrzny w spółce programistycznej. Aktualnie pełni obowiązki Head of Legal. Świadczy pomoc prawną w m.in. następujących obszarach: negocjowanie umów dotyczących rozwoju oprogramowania, tworzenie wewnętrznych polityk z zakresu compliance, bieżące doradztwo i opiniowanie nowatorskich rozwiązań technologicznych. Autor licznych publikacji popularnonaukowych (IT Professional, Rzeczpospolita).',
       bioEN: 'He collaborates with STX Next and Trenda Group. He has been involved in the new technologies sector for eight years, including working as in-house counsel at a software development company. He currently serves as Head of Legal. He provides legal support in areas such as negotiating software development agreements, drafting internal compliance policies, and offering ongoing advice and opinions on innovative technological solutions. He is the author of numerous popular science publications (IT Professional, Rzeczpospolita).'
