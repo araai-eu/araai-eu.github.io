@@ -32,10 +32,12 @@ const Footer = () => {
               {i18n.language === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy'}
             </Link>
             <a 
-              href="#" 
+              href="/pdf/ARAAI_statut.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-base sm:text-lg py-2 px-2 min-h-[44px] flex items-center"
             >
-              {i18n.language === 'pl' ? 'Ustawienia cookies' : 'Cookie settings'}
+              {i18n.language === 'pl' ? 'Statut' : 'Statute'}
             </a>
             <a 
               href="mailto:office@araai.org" 
