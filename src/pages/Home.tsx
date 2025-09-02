@@ -69,10 +69,10 @@ const Home = () => {
             {/* Left side - Text content */}
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-4 sm:mb-6 leading-tight">
-                {t('hero.welcome')} <span className="text-primary-400">{t('hero.araai')}</span>,
+                {t('hero.welcome')} <span className="text-primary-400">{t('hero.araai')}</span>
               </h1>
               
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-signika font-semibold text-primary-300 mb-3 sm:mb-4">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-signika font-semibold text-primary-300 mb-3 sm:mb-4" style={{whiteSpace: 'pre-line'}}>
                 {t('hero.subtitle')}
               </h2>
               
