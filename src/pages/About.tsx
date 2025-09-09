@@ -57,9 +57,9 @@ const About = () => {
       bioEN: 'He is an AI leader and innovation strategist with a strong track record in building and scaling AI-driven solutions across cybersecurity, online marketplaces, and IT services. He has co-authored interdisciplinary research in artificial intelligence, medical knowledge modeling, and sustainable chemical technologies, including a patented green-chemistry innovation recognized internationally. As co-founder of ARAAI and Product Cafe, he fosters ethical AI adoption and builds communities that connect product, technology, and business across Poland.'
     },
     { 
-      name: 'Dr Jędrzej Jakubowicz', 
-      role: 'Adwokat, wspólnik w Trenda Group', 
-      roleEN: 'Attorney-at-law, partner at Trenda Group',
+      name: 'Jędrzej Jakubowicz', 
+      role: 'dr nauk prawnych, adwokat', 
+      roleEN: 'PhD in Law, Attorney-at-law',
       image: '/team/Jedrzej_Jakubowicz.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/dr-j%C4%99drzej-jakubowicz-7101613b/',
       bio: 'Adwokat, wspólnik w Trenda Group. Specjalizuje się w konstruowaniu, negocjowaniu, wykładni oraz wykonaniu umów, ze szczególnym uwzględnieniem umów związanych z transakcjami, IT, projektami wieloaspektowymi oraz projektami związanymi z komercjalizacją know-how.\n\nDoradza strategicznie na każdym etapie biznesu, w tym przy analizie prawnej możliwości komercjalizacji danego przedsięwzięcia. Posiada bogate doświadczenie zawodowe w obszarze transakcji zarówno po stronie kupujących jak i sprzedających. Zajmuje się doradztwem zarządom spółek, radom nadzorczym oraz udziałowcom. Jest wieloletnim doradcą rad nadzorczych spółek, w tym spółek publicznych i z udziałem jednostek publicznych. Wykładowca z zakresu prawa spółek, prawa rynków kapitałowych, prawa cywilnego i prawa podatkowego.',
