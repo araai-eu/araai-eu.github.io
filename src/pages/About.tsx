@@ -58,7 +58,7 @@ const About = () => {
     },
     { 
       name: 'Jędrzej Jakubowicz', 
-      role: 'dr nauk prawnych, adwokat', 
+      role: 'Dr nauk prawnych, Adwokat', 
       roleEN: 'PhD in Law, Attorney-at-law',
       image: '/team/Jedrzej_Jakubowicz.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/dr-j%C4%99drzej-jakubowicz-7101613b/',
