@@ -62,7 +62,7 @@ function PrivacyPolicy() {
                 </li>
                 
                 <li className="leading-relaxed">
-                  <strong>10.</strong> Niezależnie od powyższego, przysługuje także prawo wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa – w przypadku stwierdzenia, że dane osobowe są przetwarzane sprzecznie z prawem.
+                  <strong>10.</strong> Niezależnie od powyższego, przysługuje także prawo wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych – w przypadku stwierdzenia, że dane osobowe są przetwarzane sprzecznie z prawem.
                 </li>
               </ol>
             </div>
@@ -116,7 +116,7 @@ function PrivacyPolicy() {
                 </li>
                 
                 <li className="leading-relaxed">
-                  <strong>10.</strong> Regardless of the above, you also have the right to lodge a complaint with the supervisory authority – the President of the Personal Data Protection Office, ul. Stawki 2, 00-193 Warsaw – if you determine that personal data is being processed unlawfully.
+                  <strong>10.</strong> Regardless of the above, you also have the right to lodge a complaint with the supervisory authority – the President of the Personal Data Protection Office – if you determine that personal data is being processed unlawfully.
                 </li>
               </ol>
             </div>
