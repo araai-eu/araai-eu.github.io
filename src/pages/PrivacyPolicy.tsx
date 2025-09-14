@@ -8,7 +8,7 @@ function PrivacyPolicy() {
     <div className="min-h-screen bg-dark-950 pt-24 pb-16">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          {isPolish ? 'Polityka Prywatności' : 'Privacy Policy'}
+          {isPolish ? 'Klauzula informacyjna' : 'Information clause'}
         </h1>
         
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
