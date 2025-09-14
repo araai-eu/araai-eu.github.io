@@ -29,7 +29,7 @@ const Footer = () => {
               to="/polityka-prywatnosci" 
               className="text-gray-400 hover:text-primary-400 transition-colors font-signika text-base sm:text-lg py-2 px-2 min-h-[44px] flex items-center"
             >
-              {i18n.language === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy'}
+              {i18n.language === 'pl' ? 'Klauzula informacyjna' : 'Information clause'}
             </Link>
             <a 
               href="/pdf/ARAAI_statut.pdf" 
