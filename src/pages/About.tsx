@@ -74,10 +74,10 @@ const About = () => {
       bio: 'Posiada ponad 10-letnie doświadczenie w dziedzinach Data Science, ML i AI, zbudowane na solidnym fundamencie 5 lat w rozwoju oprogramowania. Obecnie kieruje jednostką badawczo-rozwojową AI w Pearson. Jego zespół rozwija innowacyjne algorytmy AI, które wzbogacają platformy i aplikacje e-learningowe o nowe, zaawansowane funkcjonalności.\n\nOprócz roli zawodowej, aktywnie działa w społeczności akademickiej jako wykładowca studiów podyplomowych na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Jest również założycielem Horyzontu Danych, inicjatywy mającej na celu wspieranie lokalnej społeczności technologicznej w zakresie AI, ML, inżynierii danych i MLOps. Ponadto uczestniczy w projekcie Bielik, społeczności skupionej na budowaniu polskiego LLM.',
       bioEN: 'Has over 10 years of experience in Data Science, ML, and AI, built on a solid foundation of 5 years in software development. Currently leads the AI R&D unit at Pearson. His team develops innovative AI algorithms that enhance e-learning platforms and applications with new, advanced functionalities.\n\nBeyond his professional role, he actively contributes to the academic community as a lecturer for postgraduate studies at Adam Mickiewicz University in Poznań. He is also the founder of Poznan Data Horizon, an initiative aimed at supporting the local technology community in AI, ML, data engineering, and MLOps. Additionally, he participates in the Bielik project, a community focused on building a Polish LLM.'
     },
-    { 
-      name: 'Adam Karolewski', 
-      role: 'Specjalista AI', 
-      roleEN: 'AI Specialist',
+    {
+      name: 'Adam Karolewski',
+      role: 'Forecasting Manager / AIrrival',
+      roleEN: 'Forecasting Manager / AIrrival',
       image: '/team/Adam_Karolewski.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/adam-karolewski/',
       bio: 'Projektant procesów uczenia maszynowego, Data Scientist i programista R. Specjalizuje się we wdrażaniu uczenia maszynowego w zarządzaniu łańcuchem dostaw. Wykładowca na lokalnych uniwersytetach w zakresie uczenia maszynowego dla łańcucha dostaw i logistyki.\n\nWnosi innowacje poprzez łączenie prognozowania opartego na uczeniu maszynowym z teorią zarządzania zapasami. Tłumaczy prognozowanie szeregów czasowych na poziom zapasów, który najlepiej służy procesom sprzedaży. Zajmuje się projektowaniem i realizacją aplikacji. Koncentruje się na uczeniu maszynowym, modelowaniu statystycznym, wizualizacji danych i eksploracji danych, osadzając zaawansowaną analitykę w organizacji z podejściem opartym na danych.',
