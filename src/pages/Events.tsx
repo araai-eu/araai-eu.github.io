@@ -40,7 +40,7 @@ const Events = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight text-white">
             {t('events.calendar.title')}
           </h1>
         </div>
@@ -278,7 +278,7 @@ const Events = () => {
       <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-montserrat font-bold text-dark-950 mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-dark-950 mb-6 sm:mb-8">
               {t('events.upcoming.title')}
             </h2>
           </div>
@@ -319,7 +319,7 @@ const Events = () => {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 font-signika leading-relaxed mb-6 flex-grow">
+                <p className="text-gray-600 font-signika leading-relaxed mb-6 flex-grow text-base sm:text-lg">
                   {event.description}
                 </p>
                 
@@ -373,7 +373,7 @@ const Events = () => {
                 </button>
               </div>
               
-              <div className="text-dark-700 font-signika leading-relaxed mb-8 text-lg whitespace-pre-line">
+              <div className="text-dark-700 font-signika leading-relaxed mb-8 text-base sm:text-lg whitespace-pre-line">
                 {selectedEvent.fullDescription || selectedEvent.description}
               </div>
               

@@ -34,7 +34,7 @@ const News = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight text-primary-400">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight text-primary-400">
             {t('news.title')}
           </h1>
         </div>
@@ -58,7 +58,7 @@ const News = () => {
                   </h2>
                 </div>
                 
-                <p className="text-gray-600 font-signika leading-relaxed mb-6">
+                <p className="text-gray-600 font-signika leading-relaxed mb-6 text-base sm:text-lg">
                   {article.content}
                 </p>
               </article>

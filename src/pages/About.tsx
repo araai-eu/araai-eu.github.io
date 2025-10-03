@@ -108,10 +108,19 @@ const About = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-white">
+      {/* Full Name Section */}
+      <section className="py-8 sm:py-12 bg-white border-b-2 border-primary-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-bold text-dark-950">
+            {currentLanguage === 'en' ? t('about.fullName.english') : t('about.fullName.polish')}
+          </h1>
+        </div>
+      </section>
+
       {/* Nasza Wizja Section */}
       <section className="py-12 sm:py-20 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 relative overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold mb-8 text-primary-400">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold mb-8 text-primary-400">
             {t('about.vision.title')}
           </h2>
           
@@ -127,7 +136,7 @@ const About = () => {
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-dark-950 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold text-dark-950 mb-8">
               {t('about.goals.title')}
             </h2>
           </div>
@@ -137,7 +146,7 @@ const About = () => {
               {leftGoals.map((goal: string, index: number) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="text-primary-400 mt-0 flex-shrink-0 text-3xl font-black leading-none">→</div>
-                  <p className="text-dark-700 font-signika leading-relaxed text-lg">
+                  <p className="text-dark-700 font-signika leading-relaxed text-base sm:text-lg">
                     {goal}
                   </p>
                 </div>
@@ -148,7 +157,7 @@ const About = () => {
               {rightGoals.map((goal: string, index: number) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="text-primary-400 mt-0 flex-shrink-0 text-3xl font-black leading-none">→</div>
-                  <p className="text-dark-700 font-signika leading-relaxed text-lg">
+                  <p className="text-dark-700 font-signika leading-relaxed text-base sm:text-lg">
                     {goal}
                   </p>
                 </div>
@@ -187,7 +196,7 @@ const About = () => {
                     }}
                   />
                 </div>
-                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-xl sm:text-2xl transition-colors duration-300">
                   {member.name}
                 </h3>
                 <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
@@ -200,14 +209,14 @@ const About = () => {
           {/* Second row - 3 people */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {boardMembers.slice(4, 7).map((member, index) => (
-              <div 
-                key={index + 4} 
+              <div
+                key={index + 4}
                 className="text-center cursor-pointer bg-white rounded-lg p-4 hover:bg-dark-950 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl group"
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-4 overflow-hidden rounded-lg">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
@@ -216,7 +225,7 @@ const About = () => {
                     }}
                   />
                 </div>
-                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-xl sm:text-2xl transition-colors duration-300">
                   {member.name}
                 </h3>
                 <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
@@ -257,7 +266,7 @@ const About = () => {
                       }}
                     />
                   </div>
-                  <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-sm sm:text-base transition-colors duration-300">
+                  <h3 className="font-montserrat font-bold text-dark-950 group-hover:text-white text-xl sm:text-2xl transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="font-signika text-primary-400 group-hover:text-primary-300 text-xs sm:text-sm transition-colors duration-300">
@@ -300,7 +309,7 @@ const About = () => {
                 {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-montserrat font-bold text-white">
+                    <h3 className="text-2xl sm:text-3xl font-montserrat font-bold text-white">
                       {selectedMember.name}
                     </h3>
                     {/* LinkedIn Icon */}
@@ -323,7 +332,7 @@ const About = () => {
                   <p className="text-primary-300 font-signika font-semibold mb-4">
                     {currentLanguage === 'en' ? selectedMember.roleEN : selectedMember.role}
                   </p>
-                  <p className="text-gray-300 font-signika leading-relaxed whitespace-pre-line">
+                  <p className="text-gray-300 font-signika leading-relaxed whitespace-pre-line text-base sm:text-lg">
                     {currentLanguage === 'en' ? selectedMember.bioEN : selectedMember.bio}
                   </p>
                 </div>

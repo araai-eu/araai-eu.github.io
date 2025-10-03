@@ -130,6 +130,10 @@
   "about": {
     "title": "About us",
     "subtitle": "We are an AI community that jointly drives innovation and supports breakthrough ideas, shaping the future of Polish society, business and science.",
+    "fullName": {
+      "polish": "Stowarzyszenie Badań i Zastosowań Sztucznej Inteligencji",
+      "english": "Association for Research and Applications of Artificial Intelligence"
+    },
     "vision": {
       "title": "Our Vision",
       "description": "We stimulate the AI ecosystem so that Poland becomes a leader in artificial intelligence and sets innovation in Europe. We create key places where AI knowledge and practice connect. Our actions are a catalyst for future generations, building a world where technology and humans coexist in harmony."

@@ -138,6 +138,10 @@
   "about": {
     "title": "O nas",
     "subtitle": "Jesteśmy społecznością AI, która wspólnie napędza innowacje i wspiera przełomowe idee, kształtując przyszłość polskiego społeczeństwa, biznesu i nauki.",
+    "fullName": {
+      "polish": "Stowarzyszenie Badań i Zastosowań Sztucznej Inteligencji",
+      "english": "Association for Research and Applications of Artificial Intelligence"
+    },
     "vision": {
       "title": "Nasza Wizja",
       "description": "Stymulujemy ekosystem AI, aby Polska stała się liderem sztucznej inteligencji i wyznaczała innowacje w Europie. Tworzymy kluczowe miejsca, gdzie wiedza i praktyka AI się łączą. Nasze działania są katalizatorem dla przyszłych pokoleń, budując świat, w którym technologia i człowiek współistnieją w harmonii."
