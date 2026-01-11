@@ -67,7 +67,7 @@ const About = () => {
     },
     { 
       name: 'Krzysztof Jędrzejewski',
-      role: 'Ekspert, lider i facylitator społeczności AI', 
+      role: 'Ekspert, lider i twórca społeczności AI', 
       roleEN: 'AI expert, leader and community builder',
       image: '/team/Krzysztof_Jedrzejewski.jpeg',
       linkedinUrl: 'https://www.linkedin.com/in/kjedrzejewski/',
