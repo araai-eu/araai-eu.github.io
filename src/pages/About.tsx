@@ -66,9 +66,9 @@ const About = () => {
       bioEN: 'Attorney-at-law, partner at Trenda Group. Specializes in constructing, negotiating, interpreting, and executing contracts, with a particular focus on agreements related to transactions, IT, multi-faceted projects, and know-how commercialization projects.\n\nProvides strategic advice at every stage of business, including legal analysis of the commercialization potential of specific ventures. Has extensive professional experience in transactions, working with both buyers and sellers. Advises company boards, supervisory boards, and shareholders. A long-time advisor to company supervisory boards, including public companies and those with public entity participation. Lecturer in corporate law, capital market law, civil law, and tax law.'
     },
     { 
-      name: 'Krzysztof Jędrzejewski', 
-      role: 'Dyrektor AI R&D, Pearson', 
-      roleEN: 'AI R&D Director, Pearson',
+      name: 'Krzysztof Jędrzejewski',
+      role: 'Ekspert, lider i facylitator społeczności w obszarze AI', 
+      roleEN: 'AI expert, leader and community builder',
       image: '/team/Krzysztof_Jedrzejewski.jpeg',
       linkedinUrl: 'https://www.linkedin.com/in/kjedrzejewski/',
       bio: 'Posiada ponad 10-letnie doświadczenie w dziedzinach Data Science, ML i AI, zbudowane na solidnym fundamencie 5 lat w rozwoju oprogramowania. Obecnie kieruje jednostką badawczo-rozwojową AI w Pearson. Jego zespół rozwija innowacyjne algorytmy AI, które wzbogacają platformy i aplikacje e-learningowe o nowe, zaawansowane funkcjonalności.\n\nOprócz roli zawodowej, aktywnie działa w społeczności akademickiej jako wykładowca studiów podyplomowych na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Jest również założycielem Horyzontu Danych, inicjatywy mającej na celu wspieranie lokalnej społeczności technologicznej w zakresie AI, ML, inżynierii danych i MLOps. Ponadto uczestniczy w projekcie Bielik, społeczności skupionej na budowaniu polskiego LLM.',
